@@ -1,0 +1,8 @@
+.slider .indicators .indicator-item  {
+	display: block;
+	
+}
+.slider .indicators {
+	float: right;
+	line-height: 5px;
+}
