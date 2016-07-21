@@ -2,12 +2,13 @@
 <html>
 <head>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" >
-  <link type="text/css" rel="stylesheet" href="group.css">
+  <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" >
+  <link rel="stylesheet" href="group.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-  <script type="text/javascript" src="group.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+  <script src="group.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2UBdCDepS9IHAjQZELDMFJwjJIDblTdw&libraries=places&callback=initialize" async defer></script>
 </head>
 <body>
     <section class="navbar-fixed">
@@ -28,32 +29,37 @@
             </div>
         </nav>
     </section>
-    <div class="slider fullscreen" >
-        <ul class="slides">
-            <li>
-                <img src="heroImages/241901.jpg" alt="JUSTICE LEAGUE">
-                <span class="caption center-align">
-                    <h1>THE JUSTICE LEAGUE</h1>
-                </span>
-            </li>
-            <li>
-                <img src="heroImages/x_men_origins-wallpaper-1920x1080.jpg" alt="X MEN">
-                <span class="caption left-align">
-                    <h2>THE LEAGUE OF EXTRA ORDINARY MEN</h2>
-                </span>
-            </li>
-            <li>
-                <img src="heroImages/spider_man_4-wallpaper-1280x720.jpg" alt="SPIDER MAN">
-                <span class="caption right-align">
-                    <h3>PROTECTOR OF JUSTICE</h3>
-                </span>
-            </li>
-            <li>
-                <img src="heroImages/batmanvsuperman-xlarge.jpg" alt="S VS B">
-                <div class="caption center-align">
-                    <h3>SAVIOUR OF THE GALAXY</h3>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <section id="slider-container">
+        <div id="positioning-slider" class="slider fullscreen" >
+            <ul class="slides">
+                <li>
+                    <img src="heroImages/241901.jpg" alt="JUSTICE LEAGUE">
+                    <span class="caption center-align">
+                        <h1>THE JUSTICE LEAGUE</h1>
+                    </span>
+                </li>
+                <li>
+                    <img src="heroImages/x_men_origins-wallpaper-1920x1080.jpg" alt="X MEN">
+                    <span class="caption left-align">
+                        <h2>THE LEAGUE OF EXTRA ORDINARY MEN</h2>
+                    </span>
+                </li>
+                <li>
+                    <img src="heroImages/spider_man_4-wallpaper-1280x720.jpg" alt="SPIDER MAN">
+                    <span class="caption right-align">
+                        <h3>PROTECTOR OF JUSTICE</h3>
+                    </span>
+                </li>
+                <li>
+                    <img src="heroImages/batmanvsuperman-xlarge.jpg" alt="S VS B">
+                    <div class="caption center-align">
+                        <h3>SAVIOUR OF THE GALAXY</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="map-container">
+        <div id="google-map"></div>
+    </section>
 </body>
