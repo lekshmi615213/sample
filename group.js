@@ -5,4 +5,6 @@ $('.slider').slider('pause');
 $('.slider').slider('start');
 $('.slider').slider('next');
 $('.slider').slider('prev');
-      
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+});     
