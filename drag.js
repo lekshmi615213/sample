@@ -1,5 +1,19 @@
-
-$(function() {
+$(document).ready(function() {
+    $(".collapse-content").click(function() {
+        var a = $(this).parent().parent();
+        a.children("li.portlet-content").toggle();
+    });
+    $(".portlet").sortable({
+        items: "li:not(.portlet-header)"
+    });
+    $("#sortable-movie, #sortable-sports, #sortable-news, #sortable-kids, #sortable-music").sortable({
+        connectWith: ".portlet"
+    }).disableSelection();
+    $("#sortable").sortable({
+        connectWith: ".portlet-header ",
+        handle: ".portlet-header",
+        placeholder: "portlet-placeholder ui-corner-all"
+    });
     var videoModal = $('#video-modal').overlay({
         expose: {
             color: 'black',
@@ -26,5 +40,3 @@ $(function() {
         return false;
     });
 });
-
-

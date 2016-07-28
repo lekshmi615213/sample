@@ -1,7 +1,15 @@
+<<<<<<< Updated upstream
 $( document ).ready(function(){
   $(".button-collapse").sideNav();
   $('.slider').slider({full_width: true});
 });   
+=======
+$(document).ready(function(){
+  $('.slider').slider({full_width: true});
+  $(".button-collapse").sideNav();
+});  
+   
+>>>>>>> Stashed changes
 var map, infowindow, marker, i;
 
 function initialize()
