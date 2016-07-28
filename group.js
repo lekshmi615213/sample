@@ -1,9 +1,8 @@
-$( document ).ready(function(){
-  $(".button-collapse").sideNav();
+$(document).ready(function(){
   $('.slider').slider({full_width: true});
-});   
+  $(".button-collapse").sideNav();
+});  
 var map, infowindow, marker, i;
-
 function initialize()
 {
   var locations = [
@@ -30,11 +29,8 @@ function initialize()
   	zoom: 12,
   	mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-
-	map = new google.maps.Map(document.getElementById("google-map"),mapProp);
-
+  map = new google.maps.Map(document.getElementById("google-map"),mapProp);
   infowindow = new google.maps.InfoWindow();
-
   for (i = 0; i < locations.length; i++) {  
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
@@ -49,7 +45,6 @@ function initialize()
       }
     })(marker, i));
   }
-
   service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: mapCenter,
@@ -57,7 +52,6 @@ function initialize()
     type: ['bank']
   }, callback);
 }
-
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (i = 0; i < results.length; i++) {
@@ -65,14 +59,12 @@ function callback(results, status) {
     }
   }
 }
-
 function createMarker(place) {
   var placeLoc = place.geometry.location;
   marker = new google.maps.Marker({
     map: map,
     position: place.geometry.location
   });
-
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.setContent(place.name);
     infowindow.open(map, marker);
