@@ -1,0 +1,74 @@
+body { 
+  background: url(heroImages/landscape2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#main-container {
+	width: 70%;
+	background-color: #fff;
+	margin:0 auto;
+	position: relative;
+}
+#header-container {
+	text-align: left;
+	font-family: sans-serif;
+	color: #fff;
+	height: 50px;
+}
+#login-side {
+	text-align: right;
+	color: #fff;
+	display: inline-block;
+	float: right;
+}
+#logo {
+	text-align: left;
+	float: left;
+	font-weight: 100%;
+	font-size: 40px;
+	font-family: times;
+}
+.list-container {
+	line-height: 40px;
+	font-size: medium;
+	font-weight: bold;
+
+}
+.button-align {
+	text-align: center;
+	width: 60%;
+}
+#medium-head {
+	font-size: 20px;
+	color: #fff;
+	font-family: times;
+}
+.img-pos {
+	width: 447px;
+	height:350px; 
+}
+.border {
+background-color:#4cae4c;
+height: 25%;
+width: 55%;
+color: #fff;
+font-size: 30px;
+text-align: center;
+font-family: times;
+padding-top: 10px;
+} 
+.marg {
+	margin-left: 10%;
+}
+.name-li {
+	/*float: left;*/
+	text-align: left;
+	display: block;
+	list-style-type:disc;
+}
+#style-container {
+	width: 300px;
+	 height: 290px;
+}
