@@ -4,11 +4,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection">
     <link rel="stylesheet" href="group.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="materialize/js/materialize.min.js"></script>
-    <script src="group.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2UBdCDepS9IHAjQZELDMFJwjJIDblTdw&libraries=places&callback=initialize" async defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body id="major-container">
     <section class="navbar-fixed">
@@ -66,54 +62,50 @@
                     <img id="image-robert" src="heroImages/Robert-Downey-19.jpg" alt="X MEN">
                 </div>
                 <div class="col s12 m4 l4">
-                    <h3 class="header-in-responsive-part content-font">LEADERS</h3>
-<<<<<<< Updated upstream
+                    <h3 class="header-responsive content-font">LEADERS</h3>
                     <p id="content-responsive" class="content-font">We provide tickets at the cheapest rate for your favourite SUPER HERO movies. Get your tickets here.</p>
                     <p class="header-responsive"><a href="#">CLICK HERE</a></p>
-                    <img class="other-images" src="heroImages/maxresdefault.jpg" alt="X MEN">
+                  <img class="other-images" src="heroImages/maxresdefault.jpg" alt="X MEN">
                 </div>
                 <div class="col s12 m4 l4">
                     <img class="image-responsive" src="heroImages/deadpool-first-look-wide-1200x520.jpg" alt="X MEN">
                     <img class="image-responsive" src="heroImages/images.jpeg" alt="X MEN">
-=======
-                    <p id="content-in-responsive-part" class="content-font">We provide tickets at the cheapest rate for your favourite SUPER HERO movies. Get your tickets here.</p>
-                    <p class="header-in-responsive-part"><a href="#">CLICK HERE</a></p>
-                    <img class="cother-images-in-responsive-image-container" src="heroImages/maxresdefault.jpg" alt="X MEN">
-                </div>
-                <div class="col s12 m4 l4" id="secondimage-container">
-                    <!-- <img class="other-images-in-responsive-image-container" src="heroImages/deadpool-first-look-wide-1200x520.jpg" alt="X MEN">
-                    <img class="aother-images-in-responsive-image-container" src="heroImages/bond.jpg" alt="X MEN"> -->
->>>>>>> Stashed changes
                 </div>
             </div>
         </div>
     </section>
-    <nav>
-        <div class="leftside">
-            <span id="logo">
-            <a href="#">LOGO</a>
-            </span>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" >menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down" class="floatside">
+    <section>
+        <nav>
+            <div class="navigator">
+                <span id="logo">
+                    <a href="#">LOGO</a>
+                </span>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down" id="position-icon">
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">BOOKING</a></li>
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">CONTACT</a></li>
-                    <li ><a href="http://twitter.com"><img class="img" src="heroImages/twitter.png"></a></li>
-                    <li ><a href="http://facebook.com"><img class="img" src="heroImages/facebook.png"></a></li>
+                    <li><a href="http://twitter.com"><img class="icon" src="heroImages/twitter.png"></a></li>
+                    <li><a href="http://facebook.com"><img class="icon" src="heroImages/facebook.png"></a></li>
                 </ul>
-                <ul class="side-nav" id="mobile-demo" class="mobile-float" class="mobile-right">
+                <ul class="side-nav mobile-float" id="mobile-demo mobile-site">
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">BOOKING</a></li>
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">CONTACT</a></li>
-                    <li ><a href="http://twitter.com"><img class="img" src="heroImages/twitter.png"></a></li>
-                    <li ><a href="http://facebook.com"><img class="img" src="heroImages/facebook.png"></a></li>
+                    <li><a href="http://twitter.com"><img class="icon" src="heroImages/twitter.png"></a></li>
+                    <li><a href="http://facebook.com"><img class="icon" src="heroImages/facebook.png"></a></li>
                 </ul>
-        </div>
-    </nav>
+            </div>
+        </nav>
+    </section>
     <section id="map-container">
         <div id="google-map"></div>
     </section>
 </body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script src="group.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2UBdCDepS9IHAjQZELDMFJwjJIDblTdw&libraries=places&callback=initialize" async defer></script>
 </html>

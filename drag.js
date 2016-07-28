@@ -23,20 +23,16 @@ $(document).ready(function() {
         closeOnClick: true,
         api: true
     });
-
     $('.video-link').click(function() {
         videoModal.load();
-
-        var videoUrl = $(this).attr('href');
-        var flashvars = {};
-        var params = {
-            allowFullScreen: "true",
-            allowscriptaccess: "always"
-        };
-        var attributes = {};
-
+        var videoUrl = $(this).attr('href'),
+            flashvars = {},
+            attributes = {},
+            params = {
+                allowFullScreen: "true",
+                allowscriptaccess: "always"
+            };
         swfobject.embedSWF(videoUrl, 'video-container', '300', '290', '9.0.0', '', flashvars, params, attributes);
-
         return false;
     });
 });

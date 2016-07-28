@@ -4,6 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: times;
 }
 #main-container {
     width: 70%;
@@ -17,7 +18,7 @@ body {
     color: #fff;
     height: 50px;
 }
-#login-side {
+#login-title {
     text-align: right;
     color: #fff;
     display: inline-block;
@@ -26,42 +27,34 @@ body {
 #logo {
     text-align: left;
     float: left;
-    font-weight: 100%;
-    font-size: 40px;
-    font-family: times;
-}
-.list-container {
-    line-height: 40px;
-    font-size: medium;
     font-weight: bold;
+    font-size: 40px;
 }
-.button-align {
+#join-button {
     text-align: center;
     width: 60%;
 }
 #medium-head {
     font-size: 20px;
     color: #fff;
-    font-family: times;
 }
-.img-pos {
+#picture-position {
     width: 100%;
     height: 100%;
 }
-.border {
+#draggo-content {
     background-color: #4cae4c;
     height: 25%;
     width: 55%;
     color: #fff;
     font-size: 30px;
     text-align: center;
-    font-family: times;
     padding-top: 10px;
 }
-.marg {
-    margin-left: 10%;
+#video-container {
+    margin-left: 20px;
 }
-.name-li {
+.name-list {
     text-align: left;
     display: block;
     list-style-type: disc;
@@ -71,14 +64,14 @@ body {
     height: 290px;
 }
 .portlet {
-    background: #3399ff;
+    background-color: #3399ff;
     padding: 20px;
     list-style: none;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
 .portlet-content {
-    background: #cce5ff;
+    background-color: #cce5ff;
     margin: 5px;
     text-align: center;
 }
@@ -107,4 +100,9 @@ body {
 }
 #collapsable-container {
     margin-top: 10px;
+}
+#list-container {
+    line-height: 40px;
+    font-size: medium;
+    font-weight: bold;
 }

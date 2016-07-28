@@ -7,47 +7,35 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="drag.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="drag.js"></script>
 </head>
 <body>
     <header id="header-container">
         <span id="logo">draggo</span>
-        <span id="login-side">
+        <span id="login-title">
         <a href="#">Login</a>
     </span>
     </header>
     <section id="main-container">
         <div class="jumbotron text-center">
-            <h2><strong>The Best Online Bookmark Manager.</strong></h2>
+            <h1>The Best Online Bookmark Manager.</h1>
             <p class="text-warning">Draggo is a New FREE Service to Organize and Access On a Single Page.</p>
         </div>
         <div class="container text-center">
             <div class="row">
-                <div class="col-sm-6" class="marg">
+                <div class="col-sm-6" id="video-container">
                     <h2>Watch video</h2>
-                    <a href="https://www.youtube.com/embed/ePbKGoIGAXY" class="video-link"><img src="heroImages/interstellar2.png" class="img-pos"></a>
-                    <div class="modal" id="video-modal">
-                        <div id="video-container" id="style-container"></div>
-                    </div>
-                    <p>
-                        <h2>Try it Below:</h2></p>
+                    <a href="https://www.youtube.com/embed/ePbKGoIGAXY" class="video-link"><img src="heroImages/interstellar2.png" id="picture-position"></a>
+                    <h2>Try it Below:</h2>
                 </div>
-                <div class="col-sm-6">
-                    <br>
-                    <div>
-                        <p class="border">Why use Draggo?</p>
-                        <br>
-                        <ul class="list-container">
-                            <li class="name-li">It's<code>Free</code>.Create Your Own Draggo.</li>
-                            <li class="name-li">It's<code>Easy</code>.Drag & Drop Links in a Snap!</li>
-                            <li class="name-li">It's<code>Useful</code>.Save, Organize & Share Links.</li>
-                        </ul>
-                        <div class="button-align">
-                            <button type="button" class="btn btn-success btn-md">Join free!</button>
-                        </div>
+                <div class="col-sm-5">
+                    <h3 id="draggo-content">Why use Draggo?</h3>
+                    <ul id="list-container">
+                        <li class="name-list">It's<code>Free</code>.Create Your Own Draggo.</li>
+                        <li class="name-list">It's<code>Easy</code>.Drag & Drop Links in a Snap!</li>
+                        <li class="name-list">It's<code>Useful</code>.Save, Organize & Share Links.</li>
+                    </ul>
+                    <div id="join-button">
+                        <button type="button" class="btn btn-success btn-md">Join free!</button>
                     </div>
                 </div>
             </div>
@@ -115,5 +103,8 @@
         </div>
     </section>
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="drag.js"></script>
 </html>
