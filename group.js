@@ -2,7 +2,9 @@ $(document).ready(function(){
   $('.slider').slider({full_width: true});
   $(".button-collapse").sideNav();
 });  
-var map, infowindow, marker, i;
+   
+var map, infowindow, marker, i, elem, content;
+
 function initialize()
 {
   var locations = [
@@ -69,4 +71,59 @@ function createMarker(place) {
     infowindow.setContent(place.name);
     infowindow.open(map, marker);
   });
+}
+
+function switchLang (lang) {
+  var ajaxReq = new XMLHttpRequest();
+  ajaxReq.open( "GET", 'data.json', true );
+  ajaxReq.setRequestHeader("Content-type", "application/json");
+ 
+  ajaxReq.onreadystatechange = function()
+  {
+    if( ajaxReq.readyState == 4 && ajaxReq.status == 200 )
+      {
+        content = JSON.parse( ajaxReq.responseText );  
+        if (lang === "english") {
+          toEnglish(content);
+        }
+        else {
+          toArabic(content);
+        }          
+      }
+  }
+  ajaxReq.send();
+}
+
+function toArabic (content) {
+  elem = document.getElementById("lang-select");
+  elem.style.float = "left";
+  elem = document.getElementById("select-arabic");
+  elem.style.color = "orange";
+  elem = document.getElementById("select-english");
+  elem.style.color = "white";
+  elem = document.getElementById("sector-text");
+  elem.innerHTML = content[1].Arabic;
+  elem.style.float = "right";
+  elem = document.getElementById("sector-img-container");
+  elem.style.float = "left";
+  elem = document.getElementById("sector-heading");
+  elem.innerHTML = content[0].Arabic;
+  elem.style.float = "right";
+}
+
+function toEnglish (content) {
+  elem = document.getElementById("lang-select");
+  elem.style.float = "right";
+  elem = document.getElementById("select-english");
+  elem.style.color = "orange";
+  elem = document.getElementById("select-arabic");
+  elem.style.color = "white";
+  elem = document.getElementById("sector-text");
+  elem.innerHTML = content[1].English;
+  elem.style.float = "left";
+  elem = document.getElementById("sector-img-container");
+  elem.style.float = "right";
+  elem = document.getElementById("sector-heading");
+  elem.innerHTML = content[0].English;
+  elem.style.float = "left";
 }
