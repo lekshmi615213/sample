@@ -11,7 +11,7 @@ $(document).ready(function() {
   });
   $("#sortable-movie, #sortable-sports, #sortable-news, #sortable-kids, #sortable-music").sortable({
     connectWith: ".portlet"
-  }).disableSelection();
+  });
   $("#sortable").sortable({
     connectWith: ".portlet-header ",
     handle: ".portlet-header",
@@ -27,52 +27,55 @@ $(document).ready(function() {
       $('#trash-text').text("");
     }
   );
-
   $('#trash').droppable({
-    drop: function(event, ui) {
-      console.log(event);
-      var item = ui.sortable;
-      var itemType = item.prop('nodeName');
-      console.log(item);
-      itemduplicate = item.clone();
-      item.remove();
-      $('#undo').css('visibility','visible'); 
-    }
-  });
-
-  $('#undo-text').click(function(){
-    var itemText = itemduplicate.text(); 
-    $('#undo').css('visibility','hidden');
-    $('#drag-container').append(
-      '<li class="drag-item">'+itemText+'</li>'
-    );
-    var last = $('#drag-container li:last-child');
-    last.draggable(
-      { revert: true },
-      { revertDuration: 200 }
-    );
-  });
-
-  //Video
-  var videoModal = $('#video-modal').overlay({
-    expose: {
-      color: 'black',
-      loadSpeed: 200,
-      opacity: 0.85
-    },
-    closeOnClick: true,
-    api: true
-  });
-  $('.video-link').click(function() {
-    videoModal.load();
-    var videoUrl = $(this).attr('href'),
-    flashvars = {},
-    attributes = {},
-    params = {
-      allowFullScreen: "true",
-      allowscriptaccess: "always"
-    };
-    swfobject.embedSWF(videoUrl, 'video-container', '300', '290', '9.0.0', '', flashvars, params, attributes);
-    return false;
-  });
+        accept: '.portlet-content',
+        drop: function(event, ui) {
+            console.log(ui);
+            ui.helper.remove();
+            // itemduplicate = item.clone();
+            $('#undo').css('visibility','visible'); 
+        }
+    });
+  // $('#undo-text').click(function(){
+  //   var itemText = itemduplicate.text(); 
+  //   $('#undo').css('visibility','hidden');
+  //   $('#portlet').append(
+  //     '<li class="portlet-content">'+itemText+'</li>'
+  //   );
+  //   var last = $('#drag-container li:last-child');
+  //   last.draggable(
+  //     { revert: true },
+  //     { revertDuration: 200 }
+  //   );
+  // });
 });
+
+//   $('#trash').droppable({
+//     drop: function(event, ui) {
+//       console.log(event);
+//       var item = ui.sortable;
+//       console.log(event);
+//       var itemType = item.prop('nodeName');
+//       console.log(item);
+//       itemduplicate = item.clone();
+//       item.remove();
+//       $('#undo').css('visibility','visible'); 
+//     }
+//   });
+
+//   $('#undo-text').click(function(){
+//     var itemText = itemduplicate.text(); 
+//     $('#undo').css('visibility','hidden');
+//     $('#drag-container').append(
+//       '<li class="drag-item">'+itemText+'</li>'
+//     );
+//     var last = $('#drag-container li:last-child');
+//     last.draggable(
+//       { revert: true },
+//       { revertDuration: 200 }
+//     );
+//   });
+// });
+// .ui-sortable-helper li:not(:first-child) {
+//     display: none;
+// }
