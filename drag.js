@@ -1,7 +1,6 @@
 var itemduplicate;
 $(document).ready(function() {
 
-  //Sortable 
   $(".collapse-content").click(function() {
     var a = $(this).parent().parent();
       a.children("li.portlet-content").toggle();
@@ -18,7 +17,6 @@ $(document).ready(function() {
     placeholder: "portlet-placeholder ui-corner-all"
   });
 
-  //Trash
   $('#trash').hover(
     function () {
       $('#trash-text').text("Drag item here to delete");
@@ -52,27 +50,21 @@ $(document).ready(function() {
       { revertDuration: 200 }
     );
   });
-
-  //Video
-  var videoModal = $('#video-modal').overlay({
-    expose: {
-      color: 'black',
-      loadSpeed: 200,
-      opacity: 0.85
-    },
-    closeOnClick: true,
-    api: true
+  $(".popup").click(function () {
+    var $this = $(this);
+    var $iframe = $("<iframe>").attr("src", $this.data("link")).css({"width": 400, "height": 300});
+    $("#video-view").html($title).append($iframe);
+    $iframe.wrap("<div class='class-video'>");
   });
-  $('.video-link').click(function() {
-    videoModal.load();
-    var videoUrl = $(this).attr('href'),
-    flashvars = {},
-    attributes = {},
-    params = {
-      allowFullScreen: "true",
-      allowscriptaccess: "always"
-    };
-    swfobject.embedSWF(videoUrl, 'video-container', '300', '290', '9.0.0', '', flashvars, params, attributes);
-    return false;
+  
+  var div =0;
+  $("#submit-tab").click(function(){
+    div++;
+    var t = $('#txtval').val();
+    $("#add-block").append("<br/><div id='New'></div>");
+    $('#New').append("<ul class='portlet-list'>"+t+"</ul>");
+    $(".portlet-list").append("<button class='collapse-content'>-</button>");
   });
 });
+
+ 
