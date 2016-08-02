@@ -24,7 +24,9 @@
             <div class="row">
                 <div class="col-sm-6" id="video-container">
                     <h2>Watch video</h2>
-                    <a href="https://www.youtube.com/embed/ePbKGoIGAXY" class="video-link"><img src="heroImages/interstellar2.png" id="picture-position"></a>
+                    <a class="popup" href="http://www.youtube.com/embed/fbVD32w1oTo?enablejsapi=1"><img src="heroImages/interstellar2.png" id="picture-position"></a>
+                    <div id="video-view">
+                    </div>
                     <h2>Try it Below:</h2>
                 </div>
                 <div class="col-sm-5">
@@ -41,6 +43,29 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <section id="title-content">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="submit-content">
+            Add Category
+            </button>
+        </section>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Add Category:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="txtval" name="name">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="submit-tab" class="btn btn-default" data-dismiss="modal">submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="collapsable-container">
         <div class="container">
             <div class="row" id="sortable">
@@ -98,6 +123,8 @@
                         <li class="portlet-content">ZOOM</li>
                         <li class="portlet-content">Zee</li>
                     </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3" id="add-block">
                 </div>
             </div>
         </div>
