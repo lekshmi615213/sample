@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Draggo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css"> -->
     <link rel="stylesheet" href="drag.css">
 </head>
+
 <body>
     <header id="header-container">
         <span id="logo">draggo</span>
@@ -16,137 +18,139 @@
         </span>
     </header>
     <section id="main-container">
-        <div class="jumbotron text-center">
-            <h1>The Best Online Bookmark Manager.</h1>
-            <p class="text-warning">Draggo is a New FREE Service to Organize and Access On a Single Page.</p>
-        </div>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-sm-6" id="video-container">
-                    <h2>Watch video</h2>
-                    <a class="popup" href="http://www.youtube.com/embed/fbVD32w1oTo?enablejsapi=1"><img src="heroImages/interstellar2.png" id="picture-position"></a>
-                    <div id="video-view">
+        <div id="information-container">
+            <div class="jumbotron text-center">
+                <h1>The Best Online Bookmark Manager.</h1>
+                <p class="text-warning">Draggo is a New FREE Service to Organize and Access On a Single Page.</p>
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-6" id="video-container">
+                        <h2>Watch video</h2>
+                        <a class="popup" href="http://www.youtube.com/embed/fbVD32w1oTo?enablejsapi=1"><img src="heroImages/interstellar2.png" id="picture-position"></a>
+                        <div id="video-view">
+                        </div>
+                        <h2>Try it Below:</h2>
                     </div>
-                    <h2>Try it Below:</h2>
-                </div>
-                <div class="col-sm-5">
-                    <h3 id="draggo-content">Why use Draggo?</h3>
-                    <ul id="list-container">
-                        <li class="name-list">It's<code>Free</code>.Create Your Own Draggo.</li>
-                        <li class="name-list">It's<code>Easy</code>.Drag & Drop Links in a Snap!</li>
-                        <li class="name-list">It's<code>Useful</code>.Save, Organize & Share Links.</li>
-                    </ul>
-                    <div id="join-button">
-                        <button type="button" class="btn btn-success btn-md">Join free!</button>
+                    <div class="col-sm-5">
+                        <h3 id="draggo-content">Why use Draggo?</h3>
+                        <ul id="list-container">
+                            <li class="name-list">It's<code>Free</code>.Create Your Own Draggo.</li>
+                            <li class="name-list">It's<code>Easy</code>.Drag & Drop Links in a Snap!</li>
+                            <li class="name-list">It's<code>Useful</code>.Save, Organize & Share Links.</li>
+                        </ul>
+                        <div id="join-button">
+                            <button type="button" class="btn btn-success btn-md">Join free!</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <div class="container">
-        <section id="title-content">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="submit-content">
-            Add Category
-            </button>
+        <section class="container">
+            <div id="title-content">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="submit-content">
+                    Add Category
+                </button>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Add Category:</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="txtval" name="name">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="submit-tab" class="btn btn-default" data-dismiss="modal">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Add Category:</h4>
+        <section id="interactive-container">
+            <section id="collapsable-container">
+                <div class="row" id="sortable">
+                    <div class="col-xs-12 col-sm-3 col-md-3 remove-portlet" id="first">
+                        <ul class="portlet" id="sortable-movie">
+                            <li class="portlet-header">
+                                MOVIES
+                                <button class="collapse-content">-</button>
+                            </li>
+                            <li class="portlet-content">Movies Now</li>
+                            <li class="portlet-content">Star Movies</li>
+                            <li class="portlet-content">HBO</li>
+                        </ul>
                     </div>
-                    <div class="modal-body">
-                        <input type="text" id="txtval" name="name">
+                    <div class="col-xs-12 col-sm-3 col-md-3 remove-portlet" id="second">
+                        <ul class="portlet" id="sortable-sports">
+                            <li class="portlet-header">
+                                SPORTS
+                                <button class="collapse-content">-</button>
+                            </li>
+                            <li class="portlet-content">Star Sports</li>
+                            <li class="portlet-content">Ten Sports</li>
+                            <li class="portlet-content">Zee Sports</li>
+                        </ul>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" id="submit-tab" class="btn btn-default" data-dismiss="modal">submit</button>
+                    <div class="col-xs-12 col-sm-3 col-md-3 remove-portlet" id="third">
+                        <ul class="portlet" id="sortable-news">
+                            <li class="portlet-header">
+                                NEWS
+                                <button class="collapse-content">-</button>
+                            </li>
+                            <li class="portlet-content">Times Now</li>
+                            <li class="portlet-content">CNN</li>
+                            <li class="portlet-content">Zee News</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 remove-portlet" id="fourth">
+                        <ul class="portlet" id="sortable-kids">
+                            <li class="portlet-header">
+                                KIDS
+                                <button class="collapse-content">-</button>
+                            </li>
+                            <li class="portlet-content">Cartoon Network</li>
+                            <li class="portlet-content">POGO</li>
+                            <li class="portlet-content">Disney</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 remove-portlet" id="fifth">
+                        <ul class="portlet" id="sortable-music">
+                            <li class="portlet-header">
+                                MUSIC
+                                <button class="collapse-content">-</button>
+                            </li>
+                            <li class="portlet-content">MTV</li>
+                            <li class="portlet-content">ZOOM</li>
+                            <li class="portlet-content">Zee</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3" id="add-block">
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <section id="collapsable-container">
-        <div class="container">
-            <div class="row" id="sortable">
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <ul class="portlet dump" id="sortable-movie">
-                        <li class="portlet-header">
-                            MOVIES
-                            <button class="collapse-content">-</button>
-                        </li>
-                        <li class="portlet-content">Movies Now</li>
-                        <li class="portlet-content">Star Movies</li>
-                        <li class="portlet-content">HBO</li>
-                    </ul>
+            </section>
+            <aside id="sidebar-container" class="" data-spy="affix" data-offset-top="900">
+                <div id="sidebar">
+                    <h1 class="sidebar-heading">Inbox</h1>
+                    <hr id="sidebar-separator">
+                    <div id="sidebar-content">
+                        <h2 id="sidebar-content-heading">About the Inbox</h2>
+                        <p>This is where new links arrive as you save them with our Browser Button.</p>
+                        <p>Categorize your new links by moving them from here to any box on the left.</p>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <ul class="portlet dump" id="sortable-sports">
-                        <li class="portlet-header">
-                            SPORTS
-                            <button class="collapse-content">-</button>
-                        </li>
-                        <li class="portlet-content">Star Sports</li>
-                        <li class="portlet-content">Ten Sports</li>
-                        <li class="portlet-content">Zee Sports</li>
-                    </ul>
+                <div id="trash">
+                    <p id="trash-text"></p>
+                    <span class="sidebar-heading">Trash</span>
+                    <span id="trash-icon" class="glyphicon glyphicon-trash"></span>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <ul class="portlet dump" id="sortable-news">
-                        <li class="portlet-header">
-                            NEWS
-                            <button class="collapse-content">-</button>
-                        </li>
-                        <li class="portlet-content">Times Now</li>
-                        <li class="portlet-content">CNN</li>
-                        <li class="portlet-content">Zee News</li>
-                    </ul>
+                <div id="undo">
+                    Item deleted<span id="undo-text">UNDO</span>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <ul class="portlet dump" id="sortable-kids">
-                        <li class="portlet-header">
-                            KIDS
-                            <button class="collapse-content">-</button>
-                        </li>
-                        <li class="portlet-content">Cartoon Network</li>
-                        <li class="portlet-content">POGO</li>
-                        <li class="portlet-content">Disney</li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <ul class="portlet dump" id="sortable-music">
-                        <li class="portlet-header">
-                            MUSIC
-                            <button class="collapse-content">-</button>
-                        </li>
-                        <li class="portlet-content">MTV</li>
-                        <li class="portlet-content">ZOOM</li>
-                        <li class="portlet-content">Zee</li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3" id="add-block">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="sidebar-container" class="" data-spy="affix" data-offset-top="800">
-        <div id="sidebar">
-            <h1 class="sidebar-heading">Inbox</h1>
-            <hr id="sidebar-separator">
-            <div id="sidebar-content">
-                <h2 id="sidebar-content-heading">About the Inbox</h2>
-                <p>This is where new links arrive as you save them with our Browser Button.</p>
-                <p>Categorize your new links by moving them from here to any box on the left.</p>
-            </div>
-        </div>
-        <div id="trash">
-            <p id="trash-text"></p>
-            <span class="sidebar-heading">Trash</span>
-            <span id="trash-icon" class="glyphicon glyphicon-trash"></span>
-        </div>
-        <div id="undo">
-            Item deleted<span id="undo-text">UNDO</span>
-        </div>
+            </aside>
+        </section>
     </section>
 </body>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
@@ -155,4 +159,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="drag.js"></script>
+
 </html>
