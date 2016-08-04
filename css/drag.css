@@ -1,5 +1,5 @@
 body {
-    background: url(heroImages/landscape2.jpg) no-repeat center center fixed;
+    background: url(../heroImages/landscape2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -12,6 +12,7 @@ body {
     width: 90%;
     margin: 0 auto;
     position: relative;
+    color: #000;
 }
 #header-container {
     text-align: left;
@@ -131,7 +132,6 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 	margin: 0;
-	color: #78ABDD;
 }
 #sidebar-separator {
 	width: 60%;
@@ -151,18 +151,14 @@ body {
 	border: 2px solid #C2C2C2;
 	border-radius: 5px;
 	margin-top: 10px;
-	text-align: right;
+	text-align: left;
 	padding: 4px;
     width: 313px;
 }
-#trash-icon {
-	color: #78ABDD;
-}
-#trash-text {
-	float: left;
-	margin: 4px 25px;
-	color: #ADADAD;
-	font-weight: bold;
+#trash:hover::after {
+    content: "Drag item here to delete";
+    margin: 6px 25px;
+    font-weight: bold;
 }
 #undo {
 	text-align: center;
@@ -175,8 +171,8 @@ body {
 	margin-left: 7px;
 }
 .affix {
-	top: 0;
-	right: 25px;
+	top: 5px;
+	right: 32px;
 }
 .affix-top {
 	right: 0;

@@ -1,13 +1,11 @@
 $(document).ready(function() {
   $(".collapse-content").click(function() {
-    var collapseParent = $(this).parent().parent();
+    var collapseParent = $(this).parents('.portlet');
     collapseParent.children("li.portlet-content").toggle();
   });
   $(".portlet").sortable({
     items: "li:not(.portlet-header)",
-    cursorAt: { left: 5, top: 5 }
-  });
-  $("#sortable-movie, #sortable-sports, #sortable-news, #sortable-kids, #sortable-music").sortable({
+    cursorAt: { left: 5, top: 5 },
     connectWith: ".portlet"
   });
   $("#sortable").sortable({
@@ -16,14 +14,6 @@ $(document).ready(function() {
     placeholder: "portlet-placeholder ui-corner-all",
     cursorAt: { left: 5, top: 5 }
   });
-  $('#trash').hover(
-    function() {
-      $('#trash-text').text("Drag item here to delete");
-    },
-    function() {
-      $('#trash-text').text("");
-    }
-  );
   var item, itemduplicate, itemParent;
   $('#trash').droppable({
     accept: '.portlet-content, .remove-portlet',
@@ -38,6 +28,11 @@ $(document).ready(function() {
   $('#undo-text').click(function() {
     $('#undo').css('visibility', 'hidden');
     $('#' + itemParent).append(item);
+    $(".portlet").sortable({
+      items: "li:not(.portlet-header)",
+      cursorAt: { left: 5, top: 5 },
+      connectWith: ".portlet"
+    });
   });
   $(".popup").click(function () {
     var $this = $(this);
@@ -54,4 +49,3 @@ $(document).ready(function() {
     $(".portlet-list").append("<button class='collapse-content'>-</button>");
   });
 });
-
