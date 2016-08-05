@@ -93,32 +93,24 @@ function switchLang (lang) {
  
   ajaxReq.onreadystatechange = function() {
     if( ajaxReq.readyState == 4 && ajaxReq.status == 200 ) {
-        content = JSON.parse( ajaxReq.responseText );  
-        if (lang === "english") {
-          toEnglish(content);
-        }
-        else {
-          toArabic(content);
-        }          
+      content = JSON.parse( ajaxReq.responseText );  
+      if (lang === "english") {
+        document.body.classList.remove('ar');
+        document.body.classList.add('en');
+        elem = document.getElementById("sector-text");
+        elem.innerHTML = content[1].English;
+        elem = document.getElementById("sector-heading");
+        elem.innerHTML = content[0].English;
       }
+      else {
+        document.body.classList.remove('en');
+        document.body.classList.add('ar');
+        elem = document.getElementById("sector-text");
+        elem.innerHTML = content[1].Arabic;
+        elem = document.getElementById("sector-heading");
+        elem.innerHTML = content[0].Arabic;
+      }          
+    }
   }
   ajaxReq.send();
-}
-
-function toArabic (content) {
-  document.body.classList.remove('en');
-  document.body.classList.add('ar');
-  elem = document.getElementById("sector-text");
-  elem.innerHTML = content[1].Arabic;
-  elem = document.getElementById("sector-heading");
-  elem.innerHTML = content[0].Arabic;
-}
-
-function toEnglish (content) {
-  document.body.classList.remove('ar');
-  document.body.classList.add('en');
-  elem = document.getElementById("sector-text");
-  elem.innerHTML = content[1].English;
-  elem = document.getElementById("sector-heading");
-  elem.innerHTML = content[0].English;
 }

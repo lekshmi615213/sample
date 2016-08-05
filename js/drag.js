@@ -3,11 +3,7 @@ $(document).ready(function() {
     var collapseParent = $(this).parents('.portlet');
     collapseParent.children("li.portlet-content").toggle();
   });
-  $(".portlet").sortable({
-    items: "li:not(.portlet-header)",
-    cursorAt: { left: 5, top: 5 },
-    connectWith: ".portlet"
-  });
+  makeSortable();
   $("#sortable").sortable({
     connectWith: ".portlet-header ",
     handle: ".portlet-header",
@@ -28,11 +24,7 @@ $(document).ready(function() {
   $('#undo-text').click(function() {
     $('#undo').css('visibility', 'hidden');
     $('#' + itemParent).append(item);
-    $(".portlet").sortable({
-      items: "li:not(.portlet-header)",
-      cursorAt: { left: 5, top: 5 },
-      connectWith: ".portlet"
-    });
+    makeSortable();
   });
   $(".popup").click(function () {
     var $this = $(this);
@@ -40,12 +32,22 @@ $(document).ready(function() {
     $("#video-view").html($title).append($iframe);
     $iframe.wrap("<div class='class-video'>");
   });
-  var count =0;
   $("#submit-tab").click(function(){
-    count++;
     var t = $('#txtval').val();
-    $("#add-block").append("<br/><div id='New'></div>");
-    $('#New').append("<ul class='portlet-list'>"+t+"</ul>");
-    $(".portlet-list").append("<button class='collapse-content'>-</button>");
+    $("#sortable").append("<div class='col-xs-12 col-sm-3 col-md-3 remove-portlet'></div>");
+    $("#sortable > div:last-child").append("<ul class='portlet'></ul>")
+      .find("ul")
+      .append("<li class='portlet-header'>"+t+"</li>")
+      .find("li")
+      .append("<button class='collapse-content'>-</button>");
+    makeSortable();
   });
 });
+
+function makeSortable() {
+  $(".portlet").sortable({
+    items: "li:not(.portlet-header)",
+    cursorAt: { left: 5, top: 5 },
+    connectWith: ".portlet"
+  });
+}

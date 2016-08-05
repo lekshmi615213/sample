@@ -123,7 +123,7 @@ body {
 }
 #sidebar {
 	width: 313px;
-	height: 400px;
+	height: 280px;
 	border: 2px solid #C2C2C2;
 	border-radius: 5px;
 	padding: 5px;
@@ -199,9 +199,6 @@ body {
     width: 100%;
     color:#000;
     font-size: 20px;
-}
-#add-block {
-	display: block;
 }
 .ui-sortable-helper li:not(:first-child) {
     display: none;
