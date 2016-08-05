@@ -57,9 +57,9 @@ $(document).ready(function() {
     $iframe.wrap("<div class='class-video'>");
   });
   
-  var div =0;
+  var count = 0;
   $("#submit-tab").click(function(){
-    div++;
+    count++;
     var t = $('#txtval').val();
     $("#add-block").append("<br/><div id='New'></div>");
     $('#New').append("<ul class='portlet-list'>"+t+"</ul>");
