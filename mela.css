@@ -64,7 +64,11 @@ body {
 	list-style-type: none;
 	display: inline-block;
 }
-.pic-dimension {
+#pic-dimension1 {
+	width: 76px;
+	height: 76px;
+}
+#pic-dimension2 {
 	width: 76px;
 	height: 76px;
 }
@@ -112,8 +116,14 @@ h1 {
     margin: auto;
 }
 .navbar-default .navbar-fnt {
-    color:grey;
+    color:#dcd;
 }
 .navbar-default .navbar-backgrnd {
-    color: grey;
+    color: #dcd;
+}
+.icon-lay {
+	display: inline-block;
+}
+#iconNavbar {
+	display: inline-block;
 }
