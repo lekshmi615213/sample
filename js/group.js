@@ -1,12 +1,12 @@
-$(document).ready(function(){
+$(document).ready(function() {
   $('.slider').slider({full_width: true});
   $(".button-collapse").sideNav();
+  $(".slides > li:first-child > h1").fadeTo("slow", 1);
 });  
    
 var map, infowindow, marker, i, elem, content;
 
-function initialize()
-{
+function initialize() {
   var locations = [
     {
       "addr": "Technopark Phase III",
@@ -29,6 +29,7 @@ function initialize()
 	mapProp = {
   	center: mapCenter,
   	zoom: 12,
+    scrollwheel:false,
   	mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   map = new google.maps.Map(document.getElementById("google-map"),mapProp);
@@ -53,6 +54,18 @@ function initialize()
     radius: 3000,
     type: ['bank']
   }, callback);
+
+  google.maps.event.addListener(map, 'click', function(event) {
+    this.setOptions({
+      scrollwheel:true
+    });
+  });
+
+  google.maps.event.addListener(map, 'mouseout', function(event) {
+    this.setOptions({
+      scrollwheel:false
+    });  
+  });
 }
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -75,55 +88,29 @@ function createMarker(place) {
 
 function switchLang (lang) {
   var ajaxReq = new XMLHttpRequest();
-  ajaxReq.open( "GET", 'data.json', true );
+  ajaxReq.open( "GET", 'js/data.json', true );
   ajaxReq.setRequestHeader("Content-type", "application/json");
  
-  ajaxReq.onreadystatechange = function()
-  {
-    if( ajaxReq.readyState == 4 && ajaxReq.status == 200 )
-      {
-        content = JSON.parse( ajaxReq.responseText );  
-        if (lang === "english") {
-          toEnglish(content);
-        }
-        else {
-          toArabic(content);
-        }          
+  ajaxReq.onreadystatechange = function() {
+    if( ajaxReq.readyState == 4 && ajaxReq.status == 200 ) {
+      content = JSON.parse( ajaxReq.responseText );  
+      if (lang === "english") {
+        document.body.classList.remove('ar');
+        document.body.classList.add('en');
+        elem = document.getElementById("sector-text");
+        elem.innerHTML = content[1].English;
+        elem = document.getElementById("sector-heading");
+        elem.innerHTML = content[0].English;
       }
+      else {
+        document.body.classList.remove('en');
+        document.body.classList.add('ar');
+        elem = document.getElementById("sector-text");
+        elem.innerHTML = content[1].Arabic;
+        elem = document.getElementById("sector-heading");
+        elem.innerHTML = content[0].Arabic;
+      }          
+    }
   }
   ajaxReq.send();
-}
-
-function toArabic (content) {
-  elem = document.getElementById("lang-select");
-  elem.style.float = "left";
-  elem = document.getElementById("select-arabic");
-  elem.style.color = "orange";
-  elem = document.getElementById("select-english");
-  elem.style.color = "white";
-  elem = document.getElementById("sector-text");
-  elem.innerHTML = content[1].Arabic;
-  elem.style.float = "right";
-  elem = document.getElementById("sector-img-container");
-  elem.style.float = "left";
-  elem = document.getElementById("sector-heading");
-  elem.innerHTML = content[0].Arabic;
-  elem.style.float = "right";
-}
-
-function toEnglish (content) {
-  elem = document.getElementById("lang-select");
-  elem.style.float = "right";
-  elem = document.getElementById("select-english");
-  elem.style.color = "orange";
-  elem = document.getElementById("select-arabic");
-  elem.style.color = "white";
-  elem = document.getElementById("sector-text");
-  elem.innerHTML = content[1].English;
-  elem.style.float = "left";
-  elem = document.getElementById("sector-img-container");
-  elem.style.float = "right";
-  elem = document.getElementById("sector-heading");
-  elem.innerHTML = content[0].English;
-  elem.style.float = "left";
 }
