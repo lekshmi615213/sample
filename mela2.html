@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel="stylesheet" type="text/css" href="mela.css">
+  	<link rel="stylesheet" type="text/css" href="css/mela2.css">
 </head>
 <body>
 	<header id="header-content" class="jumbotron">
@@ -39,7 +39,11 @@
           		<div class="login-section">
           			<span id="caption">BY HEART, BY HAND</span>
             		<span class="sign-up"><a href="#"><img class="image-logo" src="heroImages/loginlogo.png"><p class="text-logo">login</p></a></span>
-            		<span class="sign-up"><a href="#"><img class="image-logo" src="heroImages/bag.png"><p class="text-logo">Bag</p></a>
+            		<span class="sign-up"><a href="#"><img id="image-logo1" src="heroImages/bag.png"><p class="text-logo">Bag</p></a>
+            		</span>
+            		<div id="bag-add">
+            			<button aria-label="Close Account Info Modal Box" id="close-tab">&times;</button>
+            		</div>
           		</div>
           		<div id="search-part">
             		<span class="sign-up"><a href="#"><input type="text" name="search" value="search"><img class="image-logo" src="heroImages/search.png"></a></span>
@@ -68,7 +72,7 @@
             		</ul>
             	</div>
     			<div class="col-md-5"> 
-	      			<h1>Congo Decorative Bowl, Small</h1>
+	      			<h1 id="head">Congo Decorative Bowl, Small</h1>
 	        		<h3>Description</h3>
 	        		<br>
 	        		<p id="description">Expertly handcrafted from natural bone, the sun-bleached ivory tones of our Congo decorative bowl create a classic look with an intricate mosaic design. The individual bone pieces are meticulously inlaid by our master artisans to create a striking centerpiece to showcase anywhere in your home. Wipe clean with a damp cloth. Coordinates with our entire Congo collection in grey, indigo and turquoise.</p>
@@ -77,7 +81,7 @@
 	        		<span class="material"><strong>Style Number </strong>- MABW067</span>
 	        		<br>
         			<div id="add-button">
-        				<a href="#" class="btn btn-info btn-lg" role="button">Add Items</a>
+        				<a href="#" class="btn btn-info btn-lg" id="button-submit" role="button">Add Items</a>
         				<img class="social-link" src="heroImages/like.png">
         			</div>
 				</div>
@@ -140,5 +144,5 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="zoom-plugin/jquery.zoom.js"></script>
-<script type="text/javascript" src="mela.js"></script>
+<script type="text/javascript" src="js/mela2.js"></script>
 </html>
