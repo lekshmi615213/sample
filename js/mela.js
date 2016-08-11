@@ -9,22 +9,12 @@ $(document).ready(function() {
     }
   });
   $(".message-checkbox").click(function(){
-    var d=$(this).attr('id');
-    console.log(d);
-    for(var j = 0; j <= contentImages.length; j++) {
-      if(d == contentImages[i].category){
-         var storeimage = document.getElementById('contntImages'+i);
-  var inImage = document.createElement('img');
-  inImage.setAttribute('class', "image-responsive");
-  inImage.setAttribute('src', contentImages[i].image);
-  storeimage.appendChild(inImage);
-
-      }
-    }
+    var category = $(this).val();
+    loadImages(category);
   });
 });
-function loadImages() {
- var contentImages = [
+function loadImages(category) {
+  var contentImages = [
     {
     "image":"images/interior.jpg",
     "category": "box"
@@ -65,15 +55,20 @@ function loadImages() {
     "image":"images/xyz.jpg",
     "category": "fibre"
     }
-];
-
-var i, inImage, storeimage, k, a;
-for(i = 0; i <= contentImages.length; i++) {
-  
-  storeimage = document.getElementById('contntImages'+i);
-  inImage = document.createElement('img');
-  inImage.setAttribute('class', "image-responsive");
-  inImage.setAttribute('src', contentImages[i].image);
-  storeimage.appendChild(inImage);
+  ];
+  document.getElementById('product-items').innerHTML = '';
+  var i, inImage, storeimage, k, a;
+  for(i = 0; i < contentImages.length; i++) {
+    if((category && category == contentImages[i]['category']) || !category) {
+      var itemContainer = document.createElement('section')
+      itemContainer.setAttribute('id', 'contntImages'+i);
+      itemContainer.setAttribute('class', 'col-4')
+      var inImage = document.createElement('img');
+      inImage.setAttribute('class', "image-responsive");
+      inImage.setAttribute('src', contentImages[i]['image']);      
+      document.getElementById('product-items').appendChild(itemContainer);
+      itemContainer.appendChild(inImage);
+    }
   }
 }
+
