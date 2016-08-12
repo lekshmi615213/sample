@@ -45,7 +45,7 @@ $(document).ready(function() {
       ]
     };
     document.getElementById('product-items').innerHTML = '';
-    var i, inImage, storeimage, k, a;
+    var  inImage;
     for (var prop in contentImages ) {
       var key = contentImages[prop];
       if (arr.length == 0) {
