@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/mela.css">
 </head>
 
-<body onload = "loadImages()">
+<body>
     <header class="container-fluid nav-wrapper">
         <div class="row" id="header-container"  data-spy="affix" data-offset-top="0">
             <div class="col-mela">
@@ -153,11 +153,11 @@
             </div>
             <div class="collapse navbar-collapse" id="radiobar">
                 <ul class="nav navbar-nav">
-                    <li><input type="checkbox" name='thing' value='box' class="message-checkbox" id="thing"><label for="thing"></label>Boxes</li>
-                    <li><input type="checkbox" name='thing' value='pot' class="message-checkbox" id="thing1"><label for="thing1"></label>Pots</li>
-                    <li><input type="checkbox" name='thing' value='glass' class="message-checkbox" id="thing2"><label for="thing2"></label>Glass</li>
-                    <li><input type="checkbox" name='thing' value='fibre' class="message-checkbox" id="thing3"><label for="thing3"></label>Fibre</li>
-                    <li><input type="checkbox" name='thing' value='gold' class="message-checkbox" id="thing4"><label for="thing"></label>Gold</li>
+                    <li><input type="checkbox" name='thing' value='box' class="message-checkbox" id="thing" onclick="loadImages()"><label for="thing"></label>Boxes</li>
+                    <li><input type="checkbox" name='thing' value='pot' class="message-checkbox" id="thing1" onclick="loadImages()"><label for="thing1"></label>Pots</li>
+                    <li><input type="checkbox" name='thing' value='glass' class="message-checkbox" id="thing2" onclick="loadImages()"><label for="thing2"></label>Glass</li>
+                    <li><input type="checkbox" name='thing' value='fibre' class="message-checkbox" id="thing3" onclick="loadImages()"><label for="thing3"></label>Fibre</li>
+                    <li><input type="checkbox" name='thing' value='gold' class="message-checkbox" id="thing4" onclick="loadImages()"><label for="thing"></label>Gold</li>
                 </ul>
             </div>
         </div>
@@ -192,26 +192,6 @@
             </div>
         </section>
         <section class="col-9" id="product-items">
-            <!-- <section class="col-4" id="contntImages0">
-            </section>
-            <section class="col-4" id="contntImages1">
-            </section>
-            <section class="col-4" id="contntImages2">
-            </section>
-            <section class="col-4" id="contntImages3">
-            </section>
-            <section class="col-4" id="contntImages4">
-            </section>
-            <section class="col-4" id="contntImages5">
-            </section>
-            <section class="col-4" id="contntImages6">
-            </section>
-            <section class="col-4" id="contntImages7">
-            </section>
-            <section class="col-4" id="contntImages8">
-            </section>
-            <section class="col-4" id="contntImages9">
-            </section> -->
         </section>
     </section>
     <footer class="row" id="footer-position">
@@ -239,3 +219,4 @@
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script src="js/mela.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</html>

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  var arr = [];
+  loadImages();
   $("#slider-range").slider({
     range: true,
     min: 0,
@@ -8,67 +10,66 @@ $(document).ready(function() {
       $(".amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
     }
   });
+
   $(".message-checkbox").click(function(){
     var category = $(this).val();
-    loadImages(category);
+    if(arr.indexOf(category) == -1)
+      arr.push(category);
+    else
+      arr.splice(arr.indexOf(category), 1);
+    console.log(arr);
+    loadImages();
   });
-});
-function loadImages(category) {
-  var contentImages = [
-    {
-    "image":"images/interior.jpg",
-    "category": "box"
-    }, 
-    {
-    "image":"images/abcd.jpg",
-    "category": "box"
-    },
-    {
-    "image":"images/bcd.jpg",
-    "category": "pots"
-    },
-     {
-    "image":"images/bed.jpg",
-    "category": "glass"
-    }, 
-    {
-    "image":"images/wood.jpg",
-    "category": "fibre"
-    }, 
-    {
-    "image":"images/xyz.jpg",
-    "category": "gold"
-    },
-    {
-    "image":"images/interior.jpg",
-    "category": "box"
-    },
-    {
-    "image":"images/xyz.jpg",
-    "category": "gold"
-    },
-    {
-    "image":"images/xyz.jpg",
-    "category": "gold"
-    },
-    {
-    "image":"images/xyz.jpg",
-    "category": "fibre"
-    }
-  ];
-  document.getElementById('product-items').innerHTML = '';
-  var i, inImage, storeimage, k, a;
-  for(i = 0; i < contentImages.length; i++) {
-    if((category && category == contentImages[i]['category']) || !category) {
-      var itemContainer = document.createElement('section')
-      itemContainer.setAttribute('id', 'contntImages'+i);
-      itemContainer.setAttribute('class', 'col-4')
-      var inImage = document.createElement('img');
-      inImage.setAttribute('class', "image-responsive");
-      inImage.setAttribute('src', contentImages[i]['image']);      
-      document.getElementById('product-items').appendChild(itemContainer);
-      itemContainer.appendChild(inImage);
+
+  function loadImages() {
+    var contentImages = {
+      "box": [
+        "images/interior.jpg",
+        "images/abcd.jpg",
+        "images/interior.jpg"
+      ], 
+      "pots": [
+        "images/bcd.jpg"
+      ],  
+      "glass": [
+        "images/bed.jpg"
+      ],
+      "fibre": [
+        "images/wood.jpg",
+        "images/xyz.jpg"
+      ],
+      "gold": [
+        "images/xyz.jpg",
+        "images/xyz.jpg",
+        "images/xyz.jpg"
+      ]
+    };
+    document.getElementById('product-items').innerHTML = '';
+    var i, inImage, storeimage, k, a;
+    for (var prop in contentImages ) {
+      var key = contentImages[prop];
+      if (arr.length == 0) {
+        for (var j = 0; j < key.length; j++)
+          appendImage(key[j]);
+      }
+      else {
+        for (var j = 0; j < arr.length; j++) {
+          if(arr[j] == prop) {
+            for (var k = 0; k < key.length; k++)
+              appendImage(key[k]);
+          }
+        }
+      }
     }
   }
-}
-
+    
+  function appendImage(key) {
+    var itemContainer = document.createElement('section');
+    itemContainer.setAttribute('class', 'col-4')
+    var inImage = document.createElement('img');
+    inImage.setAttribute('class', "image-responsive");
+    inImage.setAttribute('src', key);     
+    document.getElementById('product-items').appendChild(itemContainer);
+    itemContainer.appendChild(inImage);
+  }
+});
