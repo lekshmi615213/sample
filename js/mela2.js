@@ -47,13 +47,15 @@ $(document).ready(function(){
 	});
 	$("#button-submit").click(function(){
     	var t = $('.zoom-window').attr('src');
-		$("#bag-add").append("<li class='sub-list'></li>");
-		$(".sub-list").append("<div class='product-select'>"+''+'<img class="bag-image" src="' + $('.zoom-window').attr('src') + '">'+"</div>");
+		$("#bag-add").append("<div class='product-list'></div>");
+		$("#bag-add > div:last-child").append("<div class='product-select'>"+''+'<img class="bag-image" src="' + $('.zoom-window').attr('src') + '">'+"</div><br>");
+		var k = $('#item-title').text();
+		$(".product-select > div:last-child").append("<span class='product'>"+k+"</span>");
 	});
-	$("#image-logo1").click(function(){
+	$(".sign-up").click(function(){
 		$("#bag-add").show();
 	});
-	$(".close-tab").click(function(){
-		$("#bag-add").close();
-	});
+	$("#close").click(function() {
+    	$('#bag-add').hide();
+    });
 });

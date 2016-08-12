@@ -138,33 +138,21 @@ h1 {
 	background-color: #fff;
 	color: red;
 	position: absolute;
+	z-index: 5;
 }
-.main-list {
-	background-color: #fff;
-    padding: 20px;
-    list-style: none;
-    text-align: center;
-    width: 100%;
-    color:#000;
-    font-size: 20px;
-}
-.sub-list {
+.product-list {
 	background-color: #fff;
 	color:#000;
 	text-decoration-style: none;
 	list-style-type: none;
 }
 .product-select {
-	width: 100px;
-	height:100px; 
+	width: 100%;
 }
 .bag-image {
 	width: 80px;
 	height: 90px;
 }
-.collapse-content {
-	color: #000;
-}
-#close-tab {
-	float:right;
+.product {
+	width: 100%;
 }
