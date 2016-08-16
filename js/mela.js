@@ -17,7 +17,6 @@ $(document).ready(function() {
       arr.push(category);
     else
       arr.splice(arr.indexOf(category), 1);
-    console.log(arr);
     loadImages();
   });
 
@@ -45,12 +44,12 @@ $(document).ready(function() {
       ]
     };
     document.getElementById('product-items').innerHTML = '';
-    var  inImage;
     for (var prop in contentImages ) {
       var key = contentImages[prop];
       if (arr.length == 0) {
-        for (var j = 0; j < key.length; j++)
+        for (var j = 0; j < key.length; j++) {
           appendImage(key[j]);
+        }
       }
       else {
         for (var j = 0; j < arr.length; j++) {
