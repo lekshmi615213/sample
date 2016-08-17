@@ -125,9 +125,6 @@ h1 {
 .navbar-default .navbar-backgrnd {
     color: #dcd;
 }
-.icon-lay {
-	display: inline-block;
-}
 #iconNavbar {
 	display: inline-block;
 }
@@ -143,7 +140,6 @@ h1 {
 .product-list {
 	background-color: #fff;
 	color:#000;
-	text-decoration-style: none;
 	list-style-type: none;
 }
 .product-select {
@@ -152,7 +148,4 @@ h1 {
 .bag-image {
 	width: 80px;
 	height: 90px;
-}
-.product {
-	width: 100%;
 }
