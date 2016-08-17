@@ -70,7 +70,21 @@ header {
     padding: 15px;
     width: 100%;
 }
-@media only screen and (min-width:768px) {
+@media only screen and (max-width: 767px){
+	.image-responsive {
+	    display: block;
+		max-width: 50%;
+		height: auto;
+		margin: 0 auto;
+	}
+	.nav-wrapper {
+		min-height: 232px;
+	}
+	.box {
+    	height: auto;
+  } 
+}
+@media only screen and (min-width:1090px) {
 	.col-3 {width: 30%;}
 	.col-mela {width: 20%;}
 	.col-9 {width: 75%;}
@@ -219,21 +233,6 @@ header {
 		font-size: 9px;
 	}
 }
-@media only screen and (max-width: 767px){
-	.image-responsive {
-	    display: block;
-		max-width: 50%;
-		height: auto;
-		margin: 0 auto;
-	}
-	.nav-wrapper {
-		min-height: 232px;
-	}
-	.box {
-    	height: auto;
-  } 
-}
-
 #outputPrice {
 	text-align: center; 
 }
@@ -365,7 +364,7 @@ footer {
 }
 #place-footer-images {
 	width: 70%;
-	margin-right: 0 auto;
+	margin: 0 auto;
 }
 .excite-content:hover {
 	color:red;

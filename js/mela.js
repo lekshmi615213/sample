@@ -1,3 +1,25 @@
+var contentImages = {
+  "box": [
+    "images/interior.jpg",
+    "images/abcd.jpg",
+    "images/interior.jpg"
+  ], 
+  "pots": [
+    "images/bcd.jpg"
+  ],  
+  "glass": [
+    "images/bed.jpg"
+  ],
+  "fibre": [
+    "images/wood.jpg",
+    "images/xyz.jpg"
+  ],
+  "gold": [
+    "images/xyz.jpg",
+    "images/xyz.jpg",
+    "images/xyz.jpg"
+  ]
+};
 $(document).ready(function() {
   var arr = [];
   loadImages();
@@ -13,55 +35,35 @@ $(document).ready(function() {
 
   $(".message-checkbox").click(function(){
     var category = $(this).val();
-    if(arr.indexOf(category) == -1)
+    if(arr.indexOf(category) == -1) {
       arr.push(category);
-    else
+    }
+    else {
       arr.splice(arr.indexOf(category), 1);
+    }
     loadImages();
   });
 
   function loadImages() {
-    var contentImages = {
-      "box": [
-        "images/interior.jpg",
-        "images/abcd.jpg",
-        "images/interior.jpg"
-      ], 
-      "pots": [
-        "images/bcd.jpg"
-      ],  
-      "glass": [
-        "images/bed.jpg"
-      ],
-      "fibre": [
-        "images/wood.jpg",
-        "images/xyz.jpg"
-      ],
-      "gold": [
-        "images/xyz.jpg",
-        "images/xyz.jpg",
-        "images/xyz.jpg"
-      ]
-    };
-    document.getElementById('product-items').innerHTML = '';
-    for (var prop in contentImages ) {
-      var key = contentImages[prop];
-      if (arr.length == 0) {
-        for (var j = 0; j < key.length; j++) {
-          appendImage(key[j]);
-        }
+    var productItems = [],
+      newObj;
+    if(arr.length > 0) {
+      for (var i =0; i < arr.length; i++) {
+        var newObj = contentImages[arr[i]];
+        productItems.push(newObj)
       }
-      else {
-        for (var j = 0; j < arr.length; j++) {
-          if(arr[j] == prop) {
-            for (var k = 0; k < key.length; k++)
-              appendImage(key[k]);
-          }
-        }
+    } 
+    else {
+      productItems = contentImages;
+    }
+    document.getElementById('product-items').innerHTML = '';
+    for (var prop in productItems ) {
+      var key = productItems[prop];
+       for (var k = 0; k < key.length; k++){       
+        appendImage(key[k]);
       }
     }
   }
-    
   function appendImage(key) {
     var itemContainer = document.createElement('section');
     itemContainer.setAttribute('class', 'col-4')
