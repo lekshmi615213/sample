@@ -1,11 +1,21 @@
 $primary-color: #E5E5E5;
 $tab-font: 'Oswald', sans-serif;
+$content-family: 'Merriweather', serif;
 $tab-color: #8dc63f;
+$navbar-color: #000;
+$sposortxt-border: #fff;
 $underline-color: #8DC63F;
 $mobile-device: 767px;
 $image-size: 50%;
 $info-about: 5%;
-$middle-container: 90%;
+$middle-container: 80%;
+$logo-width: 72px;
+$logo-height: 50px;
+$foot-image-container: 15%;
+$foot-navbar-container: 50%;
+$foot-sponsor-container: 35%;
+$foot-responsive: 100%;
+$adjust-top: 30px;
 @mixin responsive($image-size) {
     display: block;
     max-width: $image-size;
@@ -16,36 +26,45 @@ $middle-container: 90%;
     width: $middle-container;
     margin: 0 auto;
 }
+@mixin logo-image($logo-width, $logo-height) {
+    width: $logo-width;
+    height: $logo-height;
+}
+@mixin headings($adjust-top) {
+    font-weight: bolder;
+    padding-bottom:$adjust-top;
+}
 body {
     header {
-        min-width: 80px;
+        min-height: 80px;
+        div {
+        /*min-width: 80px;*/
         background-color: $primary-color;
         width: 100%;
         opacity: 0.7;
-        z-index: 1;
+        /*z-index: 1;*/
         nav {
             height: 65px;
-            @include page-container($middle-container); 
+            @include page-container(90%); 
             padding: 2px;
-            margin-bottom: 0px;
+            margin-bottom: 10px;
             div {
                 div {
                     img {
-                        width: 150px;
-                        height: 60px;
+                        @include logo-image($logo-width, $logo-height); 
                     }
                 }
             }
         }
         .navbar-default {
             background-color: $primary-color;
+
         }
         .navbar {
             margin-bottom: 0;
         }
-    }
+    }}
     #carousel-container {
-        z-index: 10;
         .container {
             width: 100%;
             padding: 0;
@@ -65,7 +84,8 @@ body {
     }
     .tab-container {
         background-color: $primary-color;
-        div {
+        .container {
+            padding: 0;
             ul {
                 li {
                     width: 50%;
@@ -99,8 +119,22 @@ body {
     }
     .container-fluid {
         @include page-container($middle-container); 
+        color: #6B6767;
+        font-family: $content-family;
         .row {
             padding-top: $info-about;
+            .text-area {
+                h1 {
+                    @include headings($adjust-top);
+                }
+                p {
+                    font-size: 20px;
+                    span {
+                        font-weight: bolder;
+                        font-size: 25px;
+                    }
+                }
+            }
             .col-img {
                 .image-responsive {
                     @include responsive($image-size); 
@@ -108,9 +142,152 @@ body {
             }
         }
     }
+    #information-container {
+        font-family: $content-family;
+        @include page-container($middle-container);
+        h3 {
+            @include headings(0);
+            /*@include headings($adjust-top);
+            padding-bottom: 20px;
+            padding: 20px 0;*/
+        }
+        ul {
+            list-style-type: none;
+            padding: 20px 0;
+            li {
+                display: inline-block;
+                width: 22%;
+                text-align: center;
+                font-size: 20px;
+                padding-bottom: 20px;
+                @media only screen and (max-width: 480px) {
+                    display: inline-block;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 15px;
+                    float: left;
+                    line-height: 46px;
+                    padding-bottom: 20px;
+                }
+                @media only screen and (min-width: 480px) and (max-width: 869px) {
+                    font-size: 15px;
+                }
+                a {
+                    color:  #6B6767; 
+                }
+                a:hover {
+                    text-decoration: none;
+                    color: $underline-color;
+                }
+            }
+            .active {
+                a {
+                    border-bottom: 2px solid $underline-color;
+                }
+            }
+        }
+        div {
+            p {
+                padding-bottom: 20px;
+                font-size: 15px;
+            }
+        }
+    }
     footer {
-        background-image: url("images/dark.jpg");
+        float: left;
+        width: 100%;
+        background-image: url("../images/dark.jpg");
         background-size: cover;
-        height: 300px;
+        height: 450px;
+        div {
+            @include page-container($middle-container);
+            padding-top: 20px;
+            position: relative;
+            #logo-sponsor {
+                width: $foot-image-container;
+                float: left;
+                @media only screen and (max-width: $mobile-device) {
+                    width: $foot-responsive;
+                    position: absolute;
+                    top: 340px;
+                    left: 3%;
+                } 
+                img {
+                    @include logo-image(105px, 72px);
+                    
+                }
+            }
+            .navbar-inverse {
+                width: $foot-navbar-container;
+                background-color: $navbar-color;
+                border-color: $navbar-color;
+                float: left;
+                opacity: 0.7;
+                @media only screen and (max-width: $mobile-device) {
+                    left: 0;
+                    position: absolute;
+                } 
+                div {
+                    ul {
+                        @media only screen and (min-width: $mobile-device) and (max-width: 1020px) {
+                            border-bottom: 2px solid #fff;
+                        }
+                    }
+                }
+            }
+            #about-sponsor {
+                width: 50%;
+                position: absolute;
+                top: 83px;
+                left: 119px;
+                @media only screen and (max-width: 480px) {
+                    position: absolute;
+                    top: 345px;
+                    width: 51%;
+                    left: 54%;
+                } 
+                @media only screen and (min-width: 480px) and (max-width: $mobile-device) {
+                    width: $foot-sponsor-container;
+                    position: absolute;
+                    left: 70%;
+                    top: 345px;
+                }
+                
+                #sponsor-text {
+                    float: left;
+                    width: 20%;
+                    border-right: 1px solid $sposortxt-border;
+                    @media only screen and (max-width: $mobile-device) {
+                        width: 40%;
+                    }
+                }
+                img {
+                    padding-left: 3%;
+                }
+            }
+            .sponsor {
+                width: 35%;
+                float: left;
+                text-align: center;
+                font-size: 36px;
+                list-style-type: none;
+                @media only screen and (max-width: $mobile-device) {
+                    width: 100%;
+                    font-size: 46px;
+                    position: absolute;
+                    top: 265px;
+                }
+                @media only screen and (min-width: $mobile-device) and (max-width: 1020px) {
+                    width: 40%;
+                    font-size: 30px;
+                    position: absolute;
+                    top: 345px;
+                    left: 30%;
+                }
+                li {
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
