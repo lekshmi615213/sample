@@ -1,33 +1,94 @@
+* {
+  box-sizing: border-box; }
+
 body header {
-  min-height: 80px; }
-  body header div {
-    min-width: 80px;
-    background-color: #E5E5E5;
-    width: 100%;
-    opacity: 0.7;
-    z-index: 1; }
-    body header div nav {
+  min-height: 65px; }
+  body header nav {
+    opacity: .7; }
+    body header nav div .navbar-header a {
       height: 65px;
-      width: 90%;
-      margin: 0 auto;
-      padding: 2px;
-      margin-bottom: 0px; }
-      body header div nav div div img {
-        width: 72px;
-        height: 50px; }
-    body header div .navbar-default {
-      background-color: #E5E5E5; }
-    body header div .navbar {
-      margin-bottom: 0; }
+      padding: 0; }
+      body header nav div .navbar-header a img {
+        width: 64px; }
+    body header nav div .collapse ul li {
+      float: left; }
+      @media only screen and (max-width: 767px) {
+        body header nav div .collapse ul li {
+          float: left;
+          width: 100%; }
+          body header nav div .collapse ul li a {
+            font-weight: bold;
+            padding: 20px 0;
+            font-size: 15px; } }
+      body header nav div .collapse ul li ul {
+        width: 500px; }
+        body header nav div .collapse ul li ul ul {
+          list-style-type: none;
+          float: left;
+          border-right: 1px solid #000;
+          width: 40%;
+          padding-left: 0;
+          line-height: 30px; }
+          body header nav div .collapse ul li ul ul li a {
+            font-weight: normal;
+            font-size: 12px; }
+        body header nav div .collapse ul li ul span {
+          position: absolute;
+          top: 47%;
+          left: 45%;
+          font-weight: normal;
+          font-size: 12px; }
+      body header nav div .collapse ul li div span {
+        float: left;
+        width: 50%; }
+  body header .navbar-default {
+    background-color: #E5E5E5; }
 body #carousel-container .container {
+  position: relative;
   width: 100%;
   padding: 0; }
-  body #carousel-container .container .carousel .carousel-inner .item {
+  body #carousel-container .container .carousel .carousel-inner {
+    position: relative;
+    z-index: 1000;
     width: 100%; }
-    body #carousel-container .container .carousel .carousel-inner .item img {
-      width: 100%;
-      height: 850px;
-      filter: grayscale(100%); }
+    body #carousel-container .container .carousel .carousel-inner #market {
+      background-image: url("../images/market1.jpg");
+      background-size: 100% 100%;
+      height: 600px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%); }
+    body #carousel-container .container .carousel .carousel-inner #saudi {
+      background-image: url("../images/saudi-image.jpg");
+      background-size: 100% 100%;
+      height: 600px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%); }
+    body #carousel-container .container .carousel .carousel-inner #tower {
+      background-image: url("../images/tower.jpg");
+      background-size: 100% 100%;
+      height: 600px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%); }
+    body #carousel-container .container .carousel .carousel-inner #tomb {
+      background-image: url("../images/tomb.jpg");
+      background-size: 100% 100%;
+      height: 600px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%); }
+body #support-container {
+  width: 150px;
+  background-color: #8DC63F;
+  height: 50px;
+  right: 0;
+  border-radius: 20px;
+  z-index: 10;
+  position: fixed;
+  bottom: 2%; }
+  body #support-container p {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 12px 21px; }
 body .tab-container {
   background-color: #E5E5E5; }
   body .tab-container .container {
@@ -80,10 +141,7 @@ body #information-container {
   margin: 0 auto; }
   body #information-container h3 {
     font-weight: bolder;
-    padding-bottom: 0;
-    /*@include headings($adjust-top);
-    padding-bottom: 20px;
-    padding: 20px 0;*/ }
+    padding-bottom: 0; }
   body #information-container ul {
     list-style-type: none;
     padding: 20px 0; }
