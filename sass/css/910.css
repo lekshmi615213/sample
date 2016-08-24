@@ -10,11 +10,19 @@ body {
   body header .container-fluid .navbar-header .logo-section {
     width: 85px;
     height: 50px; }
-  body figure .page-image {
-    width: 100%;
-    height: 50%;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); }
+  body .carousel .carousel-inner .full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  body .carousel .carousel-inner .item #arab1 {
+    background-image: url("../images/Arab1.jpg");
+    background-size: cover; }
+  body .carousel .carousel-inner .item #arab2 {
+    background-image: url("../images/arab2.jpg");
+    background-size: cover; }
+  body .carousel .carousel-inner .item #arab3 {
+    background-image: url("../images/arab3.jpg");
+    background-size: cover; }
   body .main-nav {
     width: 100%;
     background-color: #EBECEC; }
@@ -26,8 +34,7 @@ body {
       display: inline-block;
       height: 50px;
       float: left;
-      list-style-type: none;
-      /*background-color: $primary-color;*/ }
+      list-style-type: none; }
       @media only screen and (max-width: 768px) {
         body .main-nav .tab-main {
           background-color: none; } }
@@ -38,8 +45,7 @@ body {
       font-size: 20px;
       padding: 10px;
       text-align: center;
-      height: 60px;
-      /*background-color: $primary-color;*/ }
+      height: 60px; }
       @media only screen and (max-width: 768px) {
         body .main-nav .tab-sub, body .main-nav .active {
           width: 100%; } }
@@ -49,7 +55,7 @@ body {
         body .main-nav .active {
           width: 100%; } }
     body .main-nav .active::after, body .main-nav .mainview .more-detail .present, body .mainview .more-detail .main-nav .present {
-      top: 0px;
+      top: 0;
       left: 47%;
       width: 10%;
       height: 4px;
@@ -58,18 +64,13 @@ body {
       position: absolute;
       border-radius: 10px;
       background: none repeat scroll 0% 0% #8DC63F;
-      margin: 40px 0px 0px; }
+      margin: 40px 0 0; }
   body .overview {
     width: 100%;
     height: 67px; }
   body .mainview {
     width: 100%;
-    /*@media only screen and (max-width: 768px) {
-    	h1 {
-    		width:100%;
-    		text-align: center;
-    	}
-    }*/ }
+    padding-top: 18px; }
     body .mainview h1 {
       color: #5f6366;
       margin: 40px 0px 50px; }
@@ -88,24 +89,12 @@ body {
       margin: 0 auto; }
     body .mainview h2 {
       color: #5f6366;
-      margin: 40px 0px 50px; }
+      margin: 40px 0 50px; }
     body .mainview .more-detail {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      width: 100%;
-      /*.link::after {
-      	@include width(80%);
-      	top: 0px;
-          left: 10%;
-          height: 4px;
-          content: " ";
-          display: block;
-          position: absolute;
-          border-radius: 10px;
-          background: none repeat scroll 0% 0% #8DC63F;
-          margin: 40px 0px 0px;
-      }*/ }
+      width: 100%; }
       body .mainview .more-detail li {
         float: left;
         width: 25%; }
@@ -145,37 +134,51 @@ body {
         width: 230px;
         height: 130px;
         padding: 5px; }
-    body .mainview footer {
-      background-image: url("../images/footer-gradients.jpg");
-      background-size: cover;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-      height: 500px; }
-      body .mainview footer .container .row .icon-section .logo-image {
-        width: 50px;
-        height: 50px; }
-      @media only screen and (max-width: 768px) {
-        body .mainview footer .container .row .row {
-          position: relative; }
-        body .mainview footer .container .row .icon-section {
-          position: absolute;
-          bottom: 10px; }
-        body .mainview footer .container .row .coordination {
-          position: absolute;
-          right: 0; }
-        body .mainview footer .container .row .social-link {
-          position: absolute; } }
-      body .mainview footer .container .row .footer-container .coordination .sponser-title {
-        color: #888D91;
-        font-size: 16px;
-        float: left; }
-      body .mainview footer .container .row .footer-container .coordination .arabic {
-        width: 76px;
-        height: 50px;
-        padding-left: 24px; }
-      body .mainview footer .container .row .social-link {
-        text-align: right; }
-        body .mainview footer .container .row .social-link .icon {
+  body footer {
+    background-image: url("../images/footer-gradients.jpg");
+    background-size: cover;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    height: 500px;
+    margin: 0; }
+    body footer .container .desktop-footer {
+      width: 100%;
+      height: auto;
+      padding-top: 28px; }
+      body footer .container .desktop-footer .logo-image {
+        width: 80px;
+        height: 100px; }
+      body footer .container .desktop-footer .footer-content {
+        width: 50%;
+        padding-left: 18px; }
+        body footer .container .desktop-footer .footer-content .navbar .container-fluid ul li a:hover {
+          background-color: grey; }
+        body footer .container .desktop-footer .footer-content .sponser-part .caption {
+          color: #8D8F92; }
+        body footer .container .desktop-footer .footer-content .sponser-part .sponser-pic {
+          width: 85px;
+          height: 20px; }
+      body footer .container .desktop-footer .social-link {
+        text-align: right;
+        width: 40%; }
+        body footer .container .desktop-footer .social-link .icon {
           font-size: 50px; }
+    body footer .container .mobile-footer .footer-details .navbar .container-fluid ul li a:hover {
+      background-color: grey; }
+    body footer .container .mobile-footer .footer-details .social-link {
+      text-align: center;
+      width: 100%; }
+      body footer .container .mobile-footer .footer-details .social-link .icon {
+        font-size: 50px; }
+    body footer .container .mobile-footer .logos .logo-image {
+      width: 30px;
+      height: 30px; }
+    body footer .container .mobile-footer .logos .sponser-part {
+      float: right; }
+      body footer .container .mobile-footer .logos .sponser-part .caption {
+        color: #8D8F92; }
+      body footer .container .mobile-footer .logos .sponser-part .sponser-pic {
+        width: 30px;
+        height: 30px; }
 
 /*# sourceMappingURL=910.css.map */
