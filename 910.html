@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto|Titillium+Web|Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/910.css">
 </head>
 
@@ -48,23 +50,29 @@
             </div>
         </nav>
     </header>
-    <section id="carousel-container">
-        <div class="container">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div id="market" class="item active">
-                    </div>
-                    <div id="saudi" class="item">
-                    </div>
-                    <div id="tower" class="item">
-                    </div>
-                    <div id="tomb" class="item">
+    <section id="mycarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mycarousel" data-slide-to="1"></li>
+            <li data-target="#mycarousel" data-slide-to="2"></li>
+            <li data-target="#mycarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item" id="market">
+            </div>
+            <div class="item" id="market2">
+            </div>
+            <div class="item" id="new-market">
+            </div>
+            <div class="item" id="food">
+            </div>
+            <div id="slider-caption">
+                <div id="home-icon">
+                    <img src="images/home.svg" alt="home">
+                </div>
+                <div id="icon-text-area">
+                    <div>
+                        Acesss to Market
                     </div>
                 </div>
             </div>
@@ -85,7 +93,7 @@
         <div class="row">
             <div class="text-area col-sm-9 col-md-6 col-lg-6">
                 <h1>What is it?</h1>
-                <p>An<span> E-commerce service</span> to help<span> Home Based Businesses</span> with marketing, payments and logitics.</p>
+                <p>An<strong> E-commerce service</strong> to help<strong> Home Based Businesses</strong> with marketing, payments and logitics.</p>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-6 col-img">
                 <img src="images/1.png" class="image-responsive" alt="Cinque Terre">
@@ -97,13 +105,13 @@
             </div>
             <div class="text-area col-sm-9 col-md-6 col-lg-6">
                 <h1>For whom?</h1>
-                <p><span>Entrepreneurs</span> who want to grow and develop their <span>social media based bussiness</span>.</p>
+                <p><strong>Entrepreneurs</strong> who want to grow and develop their <strong>social media based bussiness</strong>.</p>
             </div>
         </div>
         <div class="row">
             <div class="text-area col-sm-9 col-md-6 col-lg-6">
                 <h1>Why Access to Markets?</h1>
-                <p>A <span>quick and secure</span> way to run a business, expand nationwide <span>without the infrastructure costs</span> and benefit from an <span>end-to-end service</span>, including storage and delivery.</p>
+                <p>A <strong>quick and secure</strong> way to run a business, expand nationwide <strong>without the infrastructure costs</strong> and benefit from an <strong>end-to-end service</strong>, including storage and delivery.</p>
             </div>
             <div class="col-sm-3 col-md-6 col-lg-6 col-img">
                 <img src="images/3.png" class="image-responsive" alt="Cinque Terre">
@@ -164,7 +172,9 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/mela.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/910.js"></script>
 
 </html>

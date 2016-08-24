@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box; }
 
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 body header {
   min-height: 65px; }
   body header nav {
@@ -43,38 +48,42 @@ body header {
         width: 50%; }
   body header .navbar-default {
     background-color: #E5E5E5; }
-body #carousel-container .container {
-  position: relative;
-  width: 100%;
-  padding: 0; }
-  body #carousel-container .container .carousel .carousel-inner {
-    position: relative;
-    z-index: 1000;
-    width: 100%; }
-    body #carousel-container .container .carousel .carousel-inner #market {
-      background-image: url("../images/market1.jpg");
-      background-size: 100% 100%;
-      height: 600px;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%); }
-    body #carousel-container .container .carousel .carousel-inner #saudi {
-      background-image: url("../images/saudi-image.jpg");
-      background-size: 100% 100%;
-      height: 600px;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%); }
-    body #carousel-container .container .carousel .carousel-inner #tower {
-      background-image: url("../images/tower.jpg");
-      background-size: 100% 100%;
-      height: 600px;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%); }
-    body #carousel-container .container .carousel .carousel-inner #tomb {
-      background-image: url("../images/tomb.jpg");
-      background-size: 100% 100%;
-      height: 600px;
-      filter: grayscale(100%);
-      -webkit-filter: grayscale(100%); }
+body .carousel .carousel-inner #market {
+  background-image: url("../images/market1.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #market2 {
+  background-image: url("../images/market2.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #new-market {
+  background-image: url("../images/new-market.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #food {
+  background-image: url("../images/food.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #slider-caption {
+  width: 40%;
+  /*background-color: #000;*/
+  height: 100px;
+  /*opacity: .7;*/
+  position: absolute;
+  top: 21%;
+  left: 13%; }
+  body .carousel .carousel-inner #slider-caption #home-icon {
+    width: 16%;
+    float: left;
+    height: 100%; }
+  body .carousel .carousel-inner #slider-caption #icon-text-area {
+    width: 80%;
+    float: left;
+    height: 100%; }
+    body .carousel .carousel-inner #slider-caption #icon-text-area div {
+      width: 100%;
+      height: 50%;
+      float: left; }
 body #support-container {
   width: 150px;
   background-color: #8DC63F;
@@ -120,28 +129,55 @@ body .container-fluid {
   margin: 0 auto;
   color: #6B6767;
   font-family: "Merriweather", serif; }
+  @media only screen and (max-width: 767px) {
+    body .container-fluid {
+      width: 100%;
+      margin: 0 auto; } }
   body .container-fluid .row {
     padding-top: 5%; }
     body .container-fluid .row .text-area h1 {
-      font-weight: bolder;
-      padding-bottom: 30px; }
+      font-weight: bold;
+      font-size: 33px;
+      padding: 30px 0;
+      text-align: left; }
+      @media only screen and (max-width: 767px) {
+        body .container-fluid .row .text-area h1 {
+          font-weight: bold;
+          font-size: 28px;
+          padding: 30px 0;
+          text-align: center; } }
     body .container-fluid .row .text-area p {
-      font-size: 20px; }
-      body .container-fluid .row .text-area p span {
-        font-weight: bolder;
-        font-size: 25px; }
-    body .container-fluid .row .col-img .image-responsive {
-      display: block;
-      max-width: 50%;
-      height: auto;
-      margin: 0 auto; }
+      font-size: 22px;
+      line-height: 38px; }
+    body .container-fluid .row .col-img {
+      padding: 30px 0; }
+      body .container-fluid .row .col-img .image-responsive {
+        display: block;
+        max-width: 50%;
+        height: auto;
+        margin: 0 auto; }
+        @media only screen and (max-width: 767px) {
+          body .container-fluid .row .col-img .image-responsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            width: 90%;
+            margin: 0 auto; } }
 body #information-container {
   font-family: "Merriweather", serif;
   width: 80%;
   margin: 0 auto; }
+  body #information-container h1 {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 30px 0;
+    font-weight: normal; }
   body #information-container h3 {
-    font-weight: bolder;
-    padding-bottom: 0; }
+    font-weight: bold;
+    font-size: 23px;
+    padding: 0 0;
+    font-weight: normal; }
   body #information-container ul {
     list-style-type: none;
     padding: 20px 0; }
