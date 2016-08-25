@@ -26,7 +26,7 @@ body {
 	background-color: #fff;
 }
 #logo-image-container {
-	width:50%;
+	width: 50%;
 	height: auto;
 	margin: 0 auto;
 }
@@ -38,16 +38,15 @@ body {
 	width: 25%;
 }
 #navbar-container {
-	width:70%;
+	width: 70%;
 }
 header {
 	background-color: #fff;
 	z-index: 4;
 	border-bottom: 2px solid #928A8A;
 }
-
 #navbar-content {
-	width:80%;
+	width: 80%;
 	float: right;
 	height: 50px;
 }
@@ -79,7 +78,7 @@ header {
     	height: auto;
   } 
 }
-@media only screen and (min-width:769px) and (max-width:1090px)  {
+@media only screen and (min-width: 769px) and (max-width: 1090px)  {
 	.col-3 {width: 30%;}
 	.col-mela {width: 20%;}
 	.col-9 {width: 75%;}
@@ -94,10 +93,10 @@ header {
 		padding-top: 60px;
 	}
 	#hide-field {
-		display:none;
+		display: none;
 	}
 	.nav-wrapper {
-		min-height:144px;
+		min-height: 144px;
 	}
 	.navbar-text {
 		font-size: 9px;
@@ -131,7 +130,7 @@ header {
 	    font-size: 12px;
 	}
 	#logo-image-container {
-		width:100%;
+		width: 100%;
 		height: auto;
 		margin: 0 auto;
 	}
@@ -141,11 +140,8 @@ header {
 		border: 2px solid #fff;
 		border-radius: 4px;
 		font-size: 12px;
-		background-color: #eee;
-		background-image: url("../images/search.png");
-		background-position: 0px 3px;
+		background: #eee url("../images/search.png") no-repeat 0px 3px;
 		background-size: 29px 33px;
-		background-repeat: no-repeat;
 		padding: 12px 20px 12px 40px;
 	}
 	.wholesale-text {
@@ -163,8 +159,7 @@ header {
 		padding-bottom: 0px;
 		padding-top: 60px;
 	}
-	.col-2 {width: 16%;
-		text-align: }
+	.col-2 {width: 16%;}
 	.col-image-3 {width: 25%;}
 	#hide-field {
 		display:none;
@@ -173,12 +168,9 @@ header {
 		min-height:131px;
 	}
 	.navbar-text {
-	font-size: 11px;
+	    font-size: 11px;
     }
- 	.col-7 {
- 		width: 55%;
-
- 	}
+ 	.col-7 {width: 55%;}
  	.dropdown {
 	    position: relative;
 	    border: 1px solid #91949B;
@@ -261,10 +253,8 @@ footer {
     text-decoration: none;
 }
 #footer-mail {
-	background-image: url('../images/images.png');
+	background-image: url('../images/images.png') no-repeat right;
 	background-size: 30px 30px;
-    background-repeat: no-repeat;
-    background-position: right;
     width: 100%;
 }
 .navbar-appearance {
@@ -331,23 +321,20 @@ footer {
 .message-checkbox {
 	display:none;
 }
- 
 .message-checkbox + label{
-	background: url("../images/white.jpg") no-repeat; 
+	background: url("../images/white.jpg") no-repeat 0 0; 
 	width:16px; 
 	height:17px;
 	background-size: 100%;
-	background-position: 0 0;
 	display:inline-block;
 	padding: 0 0 0 0px;
 	margin-right: 10px;
 }
 .message-checkbox:checked + label {
-	background: url("../images/check.jpeg") no-repeat;
+	background: url("../images/check.jpeg") no-repeat 0 0;
 	width:16px; 
 	height:17px;
 	background-size: 100%;
-	background-position: 0 0;
 	display:inline-block;
 	padding: 0 0 0 0px;
 	margin-right: 10px;
@@ -360,7 +347,7 @@ footer {
 	margin: 0 auto;
 }
 .excite-content:hover {
-	color:red;
+	color: red;
 	font-weight: bold;
 }
 .dropdown-content  {

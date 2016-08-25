@@ -3,8 +3,7 @@
 
 .full-screen {
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
+  background: no-repeat center; }
 
 body header {
   min-height: 65px; }
@@ -22,9 +21,8 @@ body header {
           float: left;
           width: 100%; }
           body header nav div .collapse ul li a {
-            font-weight: bold;
-            padding: 20px 0;
-            font-size: 15px; } }
+            font: bold 15px;
+            padding: 20px 0; } }
       body header nav div .collapse ul li ul {
         width: 500px; }
         body header nav div .collapse ul li ul ul {
@@ -35,14 +33,12 @@ body header {
           padding-left: 0;
           line-height: 30px; }
           body header nav div .collapse ul li ul ul li a {
-            font-weight: normal;
-            font-size: 12px; }
+            font: normal 12px; }
         body header nav div .collapse ul li ul span {
           position: absolute;
           top: 47%;
           left: 45%;
-          font-weight: normal;
-          font-size: 12px; }
+          font: normal 12px; }
       body header nav div .collapse ul li div span {
         float: left;
         width: 50%; }
@@ -91,8 +87,7 @@ body .tab-container {
         body .tab-container .container ul li {
           width: 100%;
           text-align: center;
-          font-family: "Oswald", sans-serif;
-          font-size: 15px; } }
+          font: 15px "Oswald", sans-serif; } }
       body .tab-container .container ul li a {
         padding: 25px; }
     body .tab-container .container ul .active a:after {
@@ -116,15 +111,13 @@ body .container-fluid {
   body .container-fluid .row {
     padding-top: 5%; }
     body .container-fluid .row .text-area h1 {
-      font-weight: bold;
-      font-size: 33px;
+      font: bold 33px;
       padding: 30px 0;
       color: #6B6767;
       text-align: left; }
       @media only screen and (max-width: 767px) {
         body .container-fluid .row .text-area h1 {
-          font-weight: bold;
-          font-size: 28px;
+          font: bold 28px;
           padding: 30px 0;
           color: #6B6767;
           text-align: center; } }
@@ -155,17 +148,14 @@ body #information-container {
       width: 90%;
       margin: 0 auto; } }
   body #information-container h1 {
-    font-weight: bold;
-    font-size: 30px;
+    font: bold 30px;
     padding: 20px 0;
-    color: #6B6767;
-    font-weight: bold; }
-  body #information-container h3 {
-    font-weight: bold;
-    font-size: 22px;
+    color: #6B6767; }
+  body #information-container h2 {
+    font: bold 22px;
     padding: 0 0;
     color: #6B6767;
-    font-weight: bold; }
+    font-weight: normal; }
   body #information-container ul {
     list-style-type: none;
     padding: 20px 0; }
@@ -179,7 +169,6 @@ body #information-container {
         body #information-container ul li {
           display: inline-block;
           width: 50%;
-          text-align: center;
           font-size: 15px;
           float: left;
           line-height: 46px;
