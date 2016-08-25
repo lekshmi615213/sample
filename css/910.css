@@ -64,26 +64,6 @@ body .carousel .carousel-inner #food {
   background-image: url("../images/food.jpg");
   filter: grayscale(90%);
   -webkit-filter: grayscale(90%); }
-body .carousel .carousel-inner #slider-caption {
-  width: 40%;
-  /*background-color: #000;*/
-  height: 100px;
-  /*opacity: .7;*/
-  position: absolute;
-  top: 21%;
-  left: 13%; }
-  body .carousel .carousel-inner #slider-caption #home-icon {
-    width: 16%;
-    float: left;
-    height: 100%; }
-  body .carousel .carousel-inner #slider-caption #icon-text-area {
-    width: 80%;
-    float: left;
-    height: 100%; }
-    body .carousel .carousel-inner #slider-caption #icon-text-area div {
-      width: 100%;
-      height: 50%;
-      float: left; }
 body #support-container {
   width: 150px;
   background-color: #8DC63F;
@@ -139,12 +119,14 @@ body .container-fluid {
       font-weight: bold;
       font-size: 33px;
       padding: 30px 0;
+      color: #6B6767;
       text-align: left; }
       @media only screen and (max-width: 767px) {
         body .container-fluid .row .text-area h1 {
           font-weight: bold;
           font-size: 28px;
           padding: 30px 0;
+          color: #6B6767;
           text-align: center; } }
     body .container-fluid .row .text-area p {
       font-size: 22px;
@@ -165,19 +147,25 @@ body .container-fluid {
             width: 90%;
             margin: 0 auto; } }
 body #information-container {
-  font-family: "Merriweather", serif;
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Merriweather", serif; }
+  @media only screen and (max-width: 767px) {
+    body #information-container {
+      width: 90%;
+      margin: 0 auto; } }
   body #information-container h1 {
     font-weight: bold;
     font-size: 30px;
-    padding: 30px 0;
-    font-weight: normal; }
+    padding: 20px 0;
+    color: #6B6767;
+    font-weight: bold; }
   body #information-container h3 {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 22px;
     padding: 0 0;
-    font-weight: normal; }
+    color: #6B6767;
+    font-weight: bold; }
   body #information-container ul {
     list-style-type: none;
     padding: 20px 0; }
@@ -202,13 +190,14 @@ body #information-container {
       body #information-container ul li a {
         color: #6B6767; }
       body #information-container ul li a:hover {
-        text-decoration: none;
-        color: #8DC63F; }
+        text-decoration: none; }
     body #information-container ul .active a {
-      border-bottom: 2px solid #8DC63F; }
+      border-bottom: 2px solid #8DC63F;
+      color: #000; }
   body #information-container div p {
     padding-bottom: 20px;
-    font-size: 15px; }
+    font-size: 18px;
+    color: #6B6767; }
 body footer {
   float: left;
   width: 100%;
@@ -221,13 +210,13 @@ body footer {
     padding-top: 20px;
     position: relative; }
     body footer div #logo-sponsor {
-      width: 15%;
+      width: 18%;
       float: left; }
       @media only screen and (max-width: 767px) {
         body footer div #logo-sponsor {
           width: 100%;
           position: absolute;
-          top: 340px;
+          top: 290px;
           left: 3%; } }
       body footer div #logo-sponsor img {
         width: 105px;
@@ -243,7 +232,7 @@ body footer {
           left: 0;
           position: absolute; } }
       @media only screen and (min-width: 767px) and (max-width: 1020px) {
-        body footer div .navbar-inverse div ul {
+        body footer div .navbar-inverse ul {
           border-bottom: 2px solid #fff; } }
     body footer div #about-sponsor {
       width: 50%;
@@ -253,7 +242,7 @@ body footer {
       @media only screen and (max-width: 480px) {
         body footer div #about-sponsor {
           position: absolute;
-          top: 345px;
+          top: 288px;
           width: 51%;
           left: 54%; } }
       @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -271,6 +260,9 @@ body footer {
             width: 40%; } }
       body footer div #about-sponsor img {
         padding-left: 3%; }
+        @media only screen and (max-width: 330px) {
+          body footer div #about-sponsor img {
+            padding-left: 0; } }
     body footer div .sponsor {
       width: 35%;
       float: left;
@@ -280,9 +272,9 @@ body footer {
       @media only screen and (max-width: 767px) {
         body footer div .sponsor {
           width: 100%;
-          font-size: 46px;
+          font-size: 45px;
           position: absolute;
-          top: 265px; } }
+          top: 213px; } }
       @media only screen and (min-width: 767px) and (max-width: 1020px) {
         body footer div .sponsor {
           width: 40%;

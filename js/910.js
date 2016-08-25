@@ -2,7 +2,7 @@ var $item, $wHeight, $caruselHeight;
 function adjustHeight() {
   $item = $('.carousel .item');
   $wHeight = $(window).height();
-  $caruselHeight = 0.6*($wHeight);
+  $caruselHeight = 0.8*($wHeight);
   $item.height($caruselHeight); 
 }
 $( document ).ready(function() {
@@ -24,6 +24,6 @@ $(window).resize(function() {
   adjustHeight();
 })
 $('.carousel').carousel({
-    interval: 30000,
+    interval: 3000,
     pause: "false"
 });

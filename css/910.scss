@@ -2,6 +2,7 @@ $primary-color: #E5E5E5;
 $tab-font: 'Oswald', sans-serif;
 $content-family: 'Merriweather', serif;
 $tab-color: #8dc63f;
+$text-color: #6B6767;
 $navbar-color: #000;
 $sposortxt-border: #fff;
 $underline-color: #8DC63F;
@@ -11,7 +12,7 @@ $info-about: 5%;
 $middle-container: 80%;
 $logo-width: 72px;
 $logo-height: 50px;
-$foot-image-container: 15%;
+$foot-image-container: 18%;
 $foot-navbar-container: 50%;
 $foot-sponsor-container: 35%;
 $foot-responsive: 100%;
@@ -35,6 +36,7 @@ $headingfont:33px;
     font-weight: bold;
     font-size: $headingfont;
     padding:$adjust-top 0;
+    color: $text-color;
 }
 @mixin background($imgpath, $filter: 90%) {
     background-image: url($imgpath);
@@ -131,31 +133,6 @@ body {
             #food {
                  @include background('../images/food.jpg');
             }
-            #slider-caption {
-                width: 40%;
-                /*background-color: #000;*/
-                height: 100px;
-                /*opacity: .7;*/
-                position: absolute;
-                top: 21%;
-                left: 13%;
-                #home-icon {
-                    width: 16%;
-                    float: left;
-                    height: 100%;
-                }
-                #icon-text-area {
-                    width: 80%;
-                    float: left;
-                    height: 100%;
-                    div {
-                        width: 100%;
-                        height: 50%;
-                        float: left;
-                    }
-
-                }
-            }
         }
     }
     #support-container {
@@ -244,15 +221,18 @@ body {
         }
     }
     #information-container {
+        @include page-container($middle-container);
+        @media only screen and (max-width: $mobile-device) {
+            @include page-container(90%);
+        } 
         h1 {
-            @include headings($adjust-top, 30px);
-            font-weight: normal;
+            @include headings(20px, 30px);
+            font-weight: bold;
         }
         font-family: $content-family;
-        @include page-container($middle-container);
         h3 {
-            @include headings(0, 23px);
-            font-weight: normal;
+            @include headings(0, 22px);
+            font-weight: bold;
         }
         ul {
             list-style-type: none;
@@ -280,19 +260,20 @@ body {
                 }
                 a:hover {
                     text-decoration: none;
-                    color: $underline-color;
                 }
             }
             .active {
                 a {
                     border-bottom: 2px solid $underline-color;
+                    color: $navbar-color;
                 }
             }
         }
         div {
             p {
                 padding-bottom: 20px;
-                font-size: 15px;
+                font-size: 18px;
+                color: $text-color;
             }
         }
     }
@@ -312,7 +293,7 @@ body {
                 @media only screen and (max-width: $mobile-device) {
                     width: $foot-responsive;
                     position: absolute;
-                    top: 340px;
+                    top: 290px;
                     left: 3%;
                 } 
                 img {
@@ -330,12 +311,11 @@ body {
                     left: 0;
                     position: absolute;
                 } 
-                div {
-                    ul {
-                        @media only screen and (min-width: $mobile-device) and (max-width: 1020px) {
-                            border-bottom: 2px solid #fff;
-                        }
+                ul {
+                    @media only screen and (min-width: $mobile-device) and (max-width: 1020px) {
+                        border-bottom: 2px solid #fff;
                     }
+        
                 }
             }
             #about-sponsor {
@@ -345,7 +325,7 @@ body {
                 left: 119px;
                 @media only screen and (max-width: 480px) {
                     position: absolute;
-                    top: 345px;
+                    top: 288px;
                     width: 51%;
                     left: 54%;
                 } 
@@ -366,6 +346,9 @@ body {
                 }
                 img {
                     padding-left: 3%;
+                    @media only screen and (max-width: 330px) {
+                        padding-left: 0;
+                    }
                 }
             }
             .sponsor {
@@ -376,9 +359,9 @@ body {
                 list-style-type: none;
                 @media only screen and (max-width: $mobile-device) {
                     width: 100%;
-                    font-size: 46px;
+                    font-size: 45px;
                     position: absolute;
-                    top: 265px;
+                    top: 213px;
                 }
                 @media only screen and (min-width: $mobile-device) and (max-width: 1020px) {
                     width: 40%;
