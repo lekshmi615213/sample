@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MELA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery.ui.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mela.css">
+</head>
+
+<body>
+    <header class="container-fluid nav-wrapper">
+        <div class="row" id="header-container"  data-spy="affix" data-offset-top="0">
+            <div class="col-mela">
+                <img class="img-responsive" id="logo-image-container" src="images/mela-artisans-logo.png" alt="Chania">
+            </div>
+            <div class="col-6-nav col-tab-nav">
+                <nav class="navbar navbar-default navbar-appearance">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle nav-icons-collapse" data-toggle="collapse" data-target="">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </button>
+                            <button type="button" class="navbar-toggle nav-icons-collapse" data-toggle="collapse" data-target="">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </button>
+                            <button type="button" class="navbar-toggle nav-icons-collapse" data-toggle="collapse" data-target="">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                            </button>
+                            <button type="button" class="navbar-toggle nav-icons-collapse" data-toggle="collapse" data-target="#navbar-search">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            <button type="button" class="navbar-toggle nav-icons-collapse" data-toggle="collapse" data-target="#navbar-menu">
+                                <span class="glyphicon glyphicon-th-list"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar-menu">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-dropdown"><a href="#">
+                                    <span class="excite-content">What"s New</span></a>
+                                    <span class="dropdown-content">
+                                        <span class="inside-excited">
+                                            <ul id="list-excited">
+                                                <li><a href="#" class="popup-content">Rings</a></li>
+                                                <li><a href="#" class="popup-content">Necklace</a></li>
+                                                <li><a href="#" class="popup-content">Bangles</a></li>
+                                            </ul>  
+                                        </span>
+                                        <span class="inside-excited">
+                                            <p>Get the look</p>
+                                            <img class="in-image" src="images/DZAbz0S.jpg" alt="Chania">
+                                        </span>
+                                        <span class="inside-excited">
+                                            <img class="in-image" src="images/ornament.jpeg" alt="Chania">
+                                        </span>
+                                    </span>
+                                </li>
+                                <li><a href="#">Decor</a></li>
+                                <li><a href="#">Jewellery & More</a></li>
+                                <li><a href="#">Sales</a></li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar-search">
+                            <input type="text" name="search" class="search-box" placeholder="Search.." id="hide-field">
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-3 hidden-xs">
+                <div>
+                    <span class="navbar-text">BY HEART,BY HAND</span>
+                    <span class="navbar-text"><img class="profile" src="images/user.png" alt="Chania">USER</span>
+                    <span class="navbar-text"><img class="profile" src="images/shopping-bag-xxl.png" alt="Chania">BAG</span>
+                </div>
+                <div>
+                    <span class="wholesale"><input type="text" name="search" class="search-box" placeholder="search keywords"></span>
+                    <span class="wholesale"><span><img src="images/book.png" id="wholesale-image" alt="ajay"><span class="wholesale-text">WHOLESALE</span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <img class="img-responsive" id="central-image-container" src="images/interior.jpg" alt="Chania">
+    </section>
+    <section class="page-layout hidden-xs">
+        <section class="col-image-3">
+            Clear ALL
+        </section>
+        <section class="col-7">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Decor</li>        
+            </ol>
+        </section>
+        <section class="col-2">
+            <div class="dropdown">
+                <span class="dropdown-toggle" type="button" data-toggle="dropdown">LATEST
+                <span class="caret dropdown-breadcrumb"></span></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Bangles</a></li>
+                    <li><a href="#">Rings</a></li>
+                    <li><a href="#">Neklace</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <nav class="navbar navbar-default visible-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#decor-navbar">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <a class="navbar-brand" href="#">DECOR</a>
+            </div>
+            <div class="collapse navbar-collapse" id="decor-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Boxes</a></li>
+                    <li><a href="#">Trays</a></li>
+                    <li><a href="#">Pots</a></li>
+                    <li><a href="#">Glass</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default visible-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#priceNavbar">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <a class="navbar-brand" href="#">PRICE</a>
+            </div>
+            <div class="collapse navbar-collapse" id="priceNavbar">
+                <form class="nav navbar-nav">
+                    <div class="slider-range"></div>
+                    <input type="text" class="amount" value="$0 - $500">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default visible-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#radiobar">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <a class="navbar-brand" href="#">TYPES</a>
+            </div>
+            <div class="collapse navbar-collapse" id="radiobar">
+                <ul class="nav navbar-nav">
+                    <li><input type="checkbox" name='thing' value='box' class="message-checkbox" id="thing" onclick="loadImages()"><label for="thing"></label>Boxes</li>
+                    <li><input type="checkbox" name='thing' value='pot' class="message-checkbox" id="thing1" onclick="loadImages()"><label for="thing1"></label>Pots</li>
+                    <li><input type="checkbox" name='thing' value='glass' class="message-checkbox" id="thing2" onclick="loadImages()"><label for="thing2"></label>Glass</li>
+                    <li><input type="checkbox" name='thing' value='fibre' class="message-checkbox" id="thing3" onclick="loadImages()"><label for="thing3"></label>Fibre</li>
+                    <li><input type="checkbox" name='thing' value='gold' class="message-checkbox" id="thing4" onclick="loadImages()"><label for="thing"></label>Gold</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="page-layout">
+        <section class="col-image-3 hidden-xs">
+            <div class="sidebar-box">
+                <h2 class="sidebar-heading">DECOR</h2>
+                <ul class="nav nav-pills nav-stacked sidelist-container">
+                    <li>Dashboard</li>
+                    <li>Age</li>
+                    <li>Gender</li>
+                    <li>Geo</li>
+                </ul>                
+            </div>
+            <div class="sidebar-box">
+                <h2 class="sidebar-heading">PRICE</h2>
+                <form class="sidelist-container">
+                    <div id="slider-range"></div>
+                    <span><input type="text" class="amount" value="$0 - $500"></span>
+                </form>
+            </div>
+            <div class="sidebar-box">
+                <h2 class="sidebar-heading">TYPES</h2>
+                <ul class="nav nav-pills nav-stacked sidelist-container">
+                    <li><input type="checkbox" name='thing' value='box' class="message-checkbox" id="box"/><label for="box"></label>Boxes</li>
+                    <li><input type="checkbox" name='thing' value='pots' class="message-checkbox" id="pots"/><label for="pots"></label>Pots</li>
+                    <li><input type="checkbox" name='thing' value='glass' class="message-checkbox" id="glass"/><label for="glass"></label>Glass</li>
+                    <li><input type="checkbox" name='thing' value='fibre' class="message-checkbox" id="fibre"/><label for="fibre"></label>Fibre</li>
+                    <li><input type="checkbox" name='thing' value='gold' class="message-checkbox" id="gold"/><label for="gold"></label>Gold</li>
+                </ul>
+            </div>
+        </section>
+        <section class="col-9" id="product-items">
+        </section>
+    </section>
+    <footer>
+        <div class="col-4">
+            <ul class="footer-group">
+                <li class="footer-list"><a class="footer-links" href="#home">ABOUT US</a></li>
+                <li class="footer-list"><a class="footer-links" href="#news">SERVICE </a></li>
+                <li class="footer-list"><a class="footer-links" href="#contact">PRESS</a></li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <input type="email" id="footer-mail" placeholder="PERSONAL DETAILS">
+        </div>
+        <div class="col-2">
+            <div id="place-footer-images">
+               <img class="footer-images" src="images/user.png" alt="Chania">
+               <img class="footer-images" src="images/fb.jpeg" alt="Chania">
+               <img class="footer-images" src="images/twitter.png" alt="Chania">
+               <img class="footer-images" src="images/location.png" alt="Chania">
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="js/mela.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</html>

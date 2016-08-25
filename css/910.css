@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box; }
+
+.full-screen {
+  background-size: cover;
+  background: no-repeat center; }
+
+body header {
+  min-height: 65px; }
+  body header nav {
+    opacity: .7; }
+    body header nav div .navbar-header a {
+      height: 65px;
+      padding: 0; }
+      body header nav div .navbar-header a img {
+        width: 64px; }
+    body header nav div .collapse ul li {
+      float: left; }
+      @media only screen and (max-width: 767px) {
+        body header nav div .collapse ul li {
+          float: left;
+          width: 100%; }
+          body header nav div .collapse ul li a {
+            font: bold 15px;
+            padding: 20px 0; } }
+      body header nav div .collapse ul li ul {
+        width: 500px; }
+        body header nav div .collapse ul li ul ul {
+          list-style-type: none;
+          float: left;
+          border-right: 1px solid #000;
+          width: 40%;
+          padding-left: 0;
+          line-height: 30px; }
+          body header nav div .collapse ul li ul ul li a {
+            font: normal 12px; }
+        body header nav div .collapse ul li ul span {
+          position: absolute;
+          top: 47%;
+          left: 45%;
+          font: normal 12px; }
+      body header nav div .collapse ul li div span {
+        float: left;
+        width: 50%; }
+  body header .navbar-default {
+    background-color: #E5E5E5; }
+body .carousel .carousel-inner #market {
+  background-image: url("../images/market1.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #market2 {
+  background-image: url("../images/market2.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #new-market {
+  background-image: url("../images/new-market.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body .carousel .carousel-inner #food {
+  background-image: url("../images/food.jpg");
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); }
+body #support-container {
+  width: 150px;
+  background-color: #8DC63F;
+  height: 50px;
+  right: 0;
+  border-radius: 20px;
+  z-index: 10;
+  position: fixed;
+  bottom: 2%; }
+  body #support-container p {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 12px 21px; }
+body .tab-container {
+  background-color: #E5E5E5; }
+  body .tab-container .container {
+    padding: 0; }
+    body .tab-container .container ul li {
+      width: 50%;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 15px; }
+      @media only screen and (max-width: 767px) {
+        body .tab-container .container ul li {
+          width: 100%;
+          text-align: center;
+          font: 15px "Oswald", sans-serif; } }
+      body .tab-container .container ul li a {
+        padding: 25px; }
+    body .tab-container .container ul .active a:after {
+      background: none repeat scroll 0% 0% #8DC63F;
+      border-radius: 2px;
+      content: "";
+      height: 3px;
+      left: 47%;
+      position: absolute;
+      top: 77%;
+      width: 5%; }
+body .container-fluid {
+  width: 80%;
+  margin: 0 auto;
+  color: #6B6767;
+  font-family: "Merriweather", serif; }
+  @media only screen and (max-width: 767px) {
+    body .container-fluid {
+      width: 100%;
+      margin: 0 auto; } }
+  body .container-fluid .row {
+    padding-top: 5%; }
+    body .container-fluid .row .text-area h1 {
+      font: bold 33px;
+      padding: 30px 0;
+      color: #6B6767;
+      text-align: left; }
+      @media only screen and (max-width: 767px) {
+        body .container-fluid .row .text-area h1 {
+          font: bold 28px;
+          padding: 30px 0;
+          color: #6B6767;
+          text-align: center; } }
+    body .container-fluid .row .text-area p {
+      font-size: 22px;
+      line-height: 38px; }
+    body .container-fluid .row .col-img {
+      padding: 30px 0; }
+      body .container-fluid .row .col-img .image-responsive {
+        display: block;
+        max-width: 50%;
+        height: auto;
+        margin: 0 auto; }
+        @media only screen and (max-width: 767px) {
+          body .container-fluid .row .col-img .image-responsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            width: 90%;
+            margin: 0 auto; } }
+body #information-container {
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Merriweather", serif; }
+  @media only screen and (max-width: 767px) {
+    body #information-container {
+      width: 90%;
+      margin: 0 auto; } }
+  body #information-container h1 {
+    font: bold 30px;
+    padding: 20px 0;
+    color: #6B6767; }
+  body #information-container h2 {
+    font: bold 22px;
+    padding: 0 0;
+    color: #6B6767;
+    font-weight: normal; }
+  body #information-container ul {
+    list-style-type: none;
+    padding: 20px 0; }
+    body #information-container ul li {
+      display: inline-block;
+      width: 22%;
+      text-align: center;
+      font-size: 20px;
+      padding-bottom: 20px; }
+      @media only screen and (max-width: 480px) {
+        body #information-container ul li {
+          display: inline-block;
+          width: 50%;
+          font-size: 15px;
+          float: left;
+          line-height: 46px;
+          padding-bottom: 20px; } }
+      @media only screen and (min-width: 480px) and (max-width: 869px) {
+        body #information-container ul li {
+          font-size: 15px; } }
+      body #information-container ul li a {
+        color: #6B6767; }
+      body #information-container ul li a:hover {
+        text-decoration: none; }
+    body #information-container ul .active a {
+      border-bottom: 2px solid #8DC63F;
+      color: #000; }
+  body #information-container div p {
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: #6B6767; }
+body footer {
+  float: left;
+  width: 100%;
+  background-image: url("../images/dark.jpg");
+  background-size: cover;
+  height: 450px; }
+  body footer div {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative; }
+    body footer div #logo-sponsor {
+      width: 18%;
+      float: left; }
+      @media only screen and (max-width: 767px) {
+        body footer div #logo-sponsor {
+          width: 100%;
+          position: absolute;
+          top: 290px;
+          left: 3%; } }
+      body footer div #logo-sponsor img {
+        width: 105px;
+        height: 72px; }
+    body footer div .navbar-inverse {
+      width: 50%;
+      background-color: #000;
+      border-color: #000;
+      float: left;
+      opacity: 0.7; }
+      @media only screen and (max-width: 767px) {
+        body footer div .navbar-inverse {
+          left: 0;
+          position: absolute; } }
+      @media only screen and (min-width: 767px) and (max-width: 1020px) {
+        body footer div .navbar-inverse ul {
+          border-bottom: 2px solid #fff; } }
+    body footer div #about-sponsor {
+      width: 50%;
+      position: absolute;
+      top: 83px;
+      left: 119px; }
+      @media only screen and (max-width: 480px) {
+        body footer div #about-sponsor {
+          position: absolute;
+          top: 288px;
+          width: 51%;
+          left: 54%; } }
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+        body footer div #about-sponsor {
+          width: 35%;
+          position: absolute;
+          left: 70%;
+          top: 345px; } }
+      body footer div #about-sponsor #sponsor-text {
+        float: left;
+        width: 20%;
+        border-right: 1px solid #fff; }
+        @media only screen and (max-width: 767px) {
+          body footer div #about-sponsor #sponsor-text {
+            width: 40%; } }
+      body footer div #about-sponsor img {
+        padding-left: 3%; }
+        @media only screen and (max-width: 330px) {
+          body footer div #about-sponsor img {
+            padding-left: 0; } }
+    body footer div .sponsor {
+      width: 35%;
+      float: left;
+      text-align: center;
+      font-size: 36px;
+      list-style-type: none; }
+      @media only screen and (max-width: 767px) {
+        body footer div .sponsor {
+          width: 100%;
+          font-size: 45px;
+          position: absolute;
+          top: 213px; } }
+      @media only screen and (min-width: 767px) and (max-width: 1020px) {
+        body footer div .sponsor {
+          width: 40%;
+          font-size: 30px;
+          position: absolute;
+          top: 345px;
+          left: 30%; } }
+      body footer div .sponsor li {
+        display: inline-block; }
+
+/*# sourceMappingURL=910.css.map */
