@@ -1,0 +1,393 @@
+$middle-container: 80%;
+$nav-background: #fff;
+$text-color: #000;
+$mobile-device: 767px;
+$login-map: #8DC63F;
+$demo-color:  #0000FF;
+$text-font: 'Open Sans', sans-serif;
+$paddng-value: 27px;
+$text-size: 20px;
+$line-gap: 40px;
+
+@mixin content-place($middle-container) {
+    width: $middle-container;
+    margin: 0 auto;
+}
+@mixin para-font($paddng-value, $text-size, $line-gap) {
+    padding-top: $paddng-value;
+    font-size: $text-size;
+    line-height: $line-gap;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+	font-family: $text-font;
+	#navbar-container {
+		background-color: $nav-background ;
+		height: 80px;
+		border-bottom: 1px solid #F2E7E7;
+		section {
+			@include content-place(90%);
+			@media only screen and (max-width: 770px) {
+				@include content-place(100%);
+			}
+			background-color: $nav-background;
+			.container-fluid {
+				padding-left: 0;
+				padding-right: 0;
+				@media only screen and (min-width: 500px) and (max-width: 800px) {
+					@include content-place(100%);
+				}
+			}
+			section {
+				.navbar-header{
+					width: 20%;
+					@media only screen and (max-width: $mobile-device) {
+							width: 100%;
+						}
+					button {
+						background-color: #E5E5E5;
+						margin-top: 11px;
+						span {
+							color: $text-color;	
+						}
+					}
+					a { 
+						padding: 0;
+						color: white;
+						padding-top: 18px;
+						@media only screen and (max-width: $mobile-device) {
+							width: 50%;
+						}
+						img {
+							height: 30px;
+							@media only screen and (max-width: $mobile-device) {
+								height: 24px;
+								width: 60%;
+							}
+							@media only screen and (min-width: $mobile-device) and (max-width: 1000px) {
+							width: 100%;
+							}
+						}
+					}
+				}
+				#navigation-bar {
+					#major-navbar {
+						padding-top: 10px;
+						li {
+							a {
+								color: $text-color;	
+							}
+						}
+					}
+					.hidden-xs {
+						li {
+							padding: 20px 12px;
+							button {
+								border-radius: 5px;
+    							padding: 6px;
+							}
+							#login-button {
+								background-color: $login-map;
+							}
+							#demo-button {
+								background-color: $demo-color;
+							}
+						}
+					}
+					.visible-xs {
+						li {
+							color: $text-color;
+						}
+					}	
+				}
+			}
+		}
+	}
+	video {
+		width: 100%;
+    	height: auto;
+	}
+	#content-in-video {
+		top: 70%;
+	    color: $nav-background;
+	    position: absolute;
+	    width: 90%;
+	    right: 4%;
+	    @media only screen and (max-width: 550px) {
+			top: 50%;
+		}
+		#video-heading {
+		    h1 {
+	    		text-align: center;
+	    		@media only screen and (max-width: 550px) {
+					font-size: 10px;
+				}
+	    		@media only screen and (min-width: 550px) and (max-width: 975px) {
+					font-size: 20px;
+				}
+	    	}
+    	}
+	}   
+	.content-container {
+		@include content-place($middle-container);
+		p {
+			@include para-font($paddng-value, $text-size, $line-gap); 
+		    strong {
+		    	font-size: 24px;
+		    }
+		}
+		.para-after {
+			padding-bottom: 10%;
+		}
+		.para-before {
+			padding-top: 10%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.container-fluid {
+		@include content-place($middle-container);
+		section {
+			section {
+				@include para-font($paddng-value, $text-size, $line-gap); 
+				strong {
+		    		font-size: 24px;
+		    	}
+			}
+		}
+	}
+	.parallax-tyre {
+  		background: url("../images/tyres.jpg"), no-repeat , center;
+  		background-attachment: fixed;
+	    background-size: cover;
+		min-height: 300px;
+		opacity: .7;
+		position: relative;
+		@media only screen and (max-width: 1200px) {
+			background-attachment: scroll;
+		}
+		div {
+			display: block;
+			margin: 0px auto;
+			padding-top: 5%;
+			padding-bottom: 2%;
+			h1 {
+				font-size: 34px;
+				text-align: center;
+				color: $nav-background;
+				@media only screen and (max-width: $mobile-device) {
+					font-size: 27px;
+				}
+			}
+			h2 {
+				@extend h1;
+				font-size: 27px;
+				font-weight: bolder;
+			}
+			p {
+				color: $nav-background;
+				font-size: 21px;
+				text-align: center;
+				@media only screen and (max-width: $mobile-device) {
+					font-size: 15px;
+				}
+			}
+			#mobdus-content {
+				@extend h1;
+				font-size: 21px;
+				font-weight: bold;
+			}
+			.btn {
+			    margin: 0px auto;
+			    display: block;
+			}
+			img {
+				@extend .btn;
+				width: 40%;
+				@media only screen and (max-width: $mobile-device) {
+					width: 65%;
+				}
+			}
+			iframe {
+				@extend .btn;
+				width: 50%;
+				height: 270px;
+				@media only screen and (max-width: 500px) {
+					width: 95%;
+					height: 224px;
+				}
+				@media only screen and (min-width: 500px) and (max-width: $mobile-device) {
+					width: 60%;
+					height: 200px;
+				}
+			}
+			
+		}
+	}
+	.parallax-hand {
+		background-image: url("../images/handnew.jpg");
+		@extend .parallax-tyre;
+	}
+	.parallax-nature {
+		background-image: url("../images/nature.jpg");
+		@extend .parallax-tyre;
+	}
+	.parallax-factory {
+		background-image: url("../images/factory.jpg");
+		@extend .parallax-tyre;
+	}
+	#sponsor-information {
+		@include content-place($middle-container);
+		header { 
+			h2 {
+				font-size: 17px;
+				font-weight: bold;
+				text-align: center;
+				padding: 30px 0;
+				@media only screen and(max-width: $mobile-device) {
+					font-size: 12px;
+				}
+			}
+		}
+		.sponsor-image-container {
+			@include content-place(33%);
+			@media only screen and(max-width: $mobile-device) {
+				@include content-place($middle-container);
+			}
+			padding-bottom: 30px;
+			img {
+				width: 100%;
+			}
+		}
+		p {
+			font-size: 20px;
+			padding-bottom: 20px;
+			line-height: 36px;
+		}
+	}
+	#be-partner {
+		background-color: #E9E9E9;
+		padding: 15px 12px;
+		position: relative;
+		border-radius: 5px;
+		margin-bottom: 2%;
+		@include content-place($middle-container);
+		#partnership {
+			h2 {
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+		p {
+			padding-bottom: 20px;
+		}
+		#join-member {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			@media only screen and(max-width: $mobile-device) {
+				position: absolute;
+				top: 80%;
+				left: 8px;
+			}
+		}
+	}
+	#map-container {
+	    width: 100%;
+	    height: 750px;
+	    position: relative;
+	    #google-map {
+		    width: 100%;
+		    height: 100%;
+		}
+		#view-form {
+	    	position: absolute;
+	    	top: 0;
+	    	right: 0;
+	    	display: none;
+	    }
+		#form-in-map {
+			position: absolute;
+			width: 100%;
+		    height: 100%;
+		    background: url("../images/bg_contacts.png") repeat transparent;
+		    top: 0;
+		    .container-fluid { 
+		    	padding-top: 1%;
+		    	.row {
+		    		color: $nav-background;
+		    		#contact {
+		    			#contact-details {
+			    			h2 {
+		    					font-size: 21px;
+							    font-weight: bold;
+							    border-bottom: 2px solid $nav-background;
+							    padding-bottom: 5px;
+							    @media only screen and(max-width: $mobile-device) {
+									font-size: 15px;
+								}
+			    			}
+			 				h3 {
+			 					font-size: 21px;
+			 					@media only screen and(max-width: $mobile-device) {
+									font-size: 15px;
+								}
+			 				}
+			 			}	
+		 				p {
+		 					font-size: 17px;
+		 					@media only screen and(max-width: $mobile-device) {
+								font-size: 12px;
+								line-height: 18px;
+							}
+		 				}
+		    		}
+		    		#contact-form {
+		    			form {
+		    				font-size: 15px;
+		    				@media only screen and(max-width: $mobile-device) {
+								font-size: 10px;
+								line-height: 8px;
+							}
+		    				.form-inline {
+		    					.common-area {
+		    						width: 50%;
+		    						float: left;
+		    						@media only screen and(max-width: 500px) {
+		    							width: 100%;
+		    							line-height: 11px;
+		    						}
+		    						@media only screen and(min-width: 500px) and (max-width: 1000px) {
+		    							font-size: 10px;
+		    						}
+		    						.form-control {
+		    							width: 95%;
+		    						}
+								}
+		    				}
+		    				#message-area {
+		    					input {
+		    						height: 200px;
+		    						@media only screen and(max-width: $mobile-device) {
+										height: 100px;
+									}
+		    					}
+							}
+		    			}
+		    		}
+		    		#view-map {
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+		    	}
+		    }
+		}
+	}
+	footer {
+		@include content-place($middle-container);
+	}
+}
