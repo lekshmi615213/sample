@@ -8,7 +8,13 @@ $text-font: 'Open Sans', sans-serif;
 $paddng-value: 27px;
 $text-size: 20px;
 $line-gap: 40px;
-
+$heading-font: 21px;
+$heading-border: 2px;
+$heading-padding: 5px;
+$first-xs-breakpoint: 350px;
+$second-xs-breakpoint: 414px;
+$video-breakpoint: 550px;
+$iframe-breakpoint: 500px;
 @mixin content-place($middle-container) {
     width: $middle-container;
     margin: 0 auto;
@@ -17,6 +23,15 @@ $line-gap: 40px;
     padding-top: $paddng-value;
     font-size: $text-size;
     line-height: $line-gap;
+}
+@mixin contact-heading($heading-font, $heading-border, $heading-padding) {
+    font-size: $heading-font;
+    font-weight: bold;
+    border-bottom: $heading-border solid $nav-background;
+    padding-bottom: $heading-padding;
+    @media only screen and(max-width: $mobile-device) {
+		font-size: 15px;
+	}
 }
 * {
     box-sizing: border-box;
@@ -53,9 +68,39 @@ body {
 							color: $text-color;	
 						}
 					}
+					.visible-xs {
+						width: 30%;
+						float: right;
+						padding-top: 2%;
+						padding-right: 5%;
+						@media only screen and (max-width: $first-xs-breakpoint) {
+							width: 31%;
+						}
+						span {
+							padding: 2%;
+							float: right;
+							font-size: 15px;
+							@media only screen and (max-width: $second-xs-breakpoint) {
+								font-size: 12px;
+								padding: 2%;
+								float: none;
+							}
+							@media only screen and (min-width: $second-xs-breakpoint) and (max-width: $first-xs-breakpoint) {
+								font-size: 12px;
+								padding: 6%;
+								float: none;
+							}
+						}
+						#login {
+							color: $login-map;
+						}
+						#demo {
+							color: $demo-color; 
+						}
+					}
 					a { 
 						padding: 0;
-						color: white;
+						color: $nav-background;
 						padding-top: 18px;
 						@media only screen and (max-width: $mobile-device) {
 							width: 50%;
@@ -88,19 +133,8 @@ body {
 								border-radius: 5px;
     							padding: 6px;
 							}
-							#login-button {
-								background-color: $login-map;
-							}
-							#demo-button {
-								background-color: $demo-color;
-							}
 						}
 					}
-					.visible-xs {
-						li {
-							color: $text-color;
-						}
-					}	
 				}
 			}
 		}
@@ -115,16 +149,16 @@ body {
 	    position: absolute;
 	    width: 90%;
 	    right: 4%;
-	    @media only screen and (max-width: 550px) {
+	    @media only screen and (max-width: $video-breakpoint) {
 			top: 50%;
 		}
 		#video-heading {
 		    h1 {
 	    		text-align: center;
-	    		@media only screen and (max-width: 550px) {
+	    		@media only screen and (max-width: $video-breakpoint) {
 					font-size: 10px;
 				}
-	    		@media only screen and (min-width: 550px) and (max-width: 975px) {
+	    		@media only screen and (min-width: $video-breakpoint) and (max-width: 975px) {
 					font-size: 20px;
 				}
 	    	}
@@ -160,11 +194,11 @@ body {
 		}
 	}
 	.parallax-tyre {
-  		background: url("../images/tyres.jpg"), no-repeat , center;
+  		background: url("../images/tyres.jpg"), no-repeat, center;
   		background-attachment: fixed;
 	    background-size: cover;
+	    background-blend-mode:screen;
 		min-height: 300px;
-		opacity: .7;
 		position: relative;
 		@media only screen and (max-width: 1200px) {
 			background-attachment: scroll;
@@ -215,16 +249,15 @@ body {
 				@extend .btn;
 				width: 50%;
 				height: 270px;
-				@media only screen and (max-width: 500px) {
+				@media only screen and (max-width: $iframe-breakpoint) {
 					width: 95%;
 					height: 224px;
 				}
-				@media only screen and (min-width: 500px) and (max-width: $mobile-device) {
+				@media only screen and (min-width: $iframe-breakpoint) and (max-width: $mobile-device) {
 					width: 60%;
 					height: 200px;
 				}
 			}
-			
 		}
 	}
 	.parallax-hand {
@@ -322,13 +355,7 @@ body {
 		    		#contact {
 		    			#contact-details {
 			    			h2 {
-		    					font-size: 21px;
-							    font-weight: bold;
-							    border-bottom: 2px solid $nav-background;
-							    padding-bottom: 5px;
-							    @media only screen and(max-width: $mobile-device) {
-									font-size: 15px;
-								}
+		    					@include contact-heading($heading-font, $heading-border, $heading-padding);
 			    			}
 			 				h3 {
 			 					font-size: 21px;
@@ -346,6 +373,11 @@ body {
 		 				}
 		    		}
 		    		#contact-form {
+		    			header {
+		    				h2 {
+		    					@include contact-heading($heading-font, $heading-border, $heading-padding);
+		    				}
+		    			}
 		    			form {
 		    				font-size: 15px;
 		    				@media only screen and(max-width: $mobile-device) {
@@ -366,6 +398,16 @@ body {
 		    						.form-control {
 		    							width: 95%;
 		    						}
+		    						/*input:required {
+									  border: 1px solid yellow;
+									}
+		    						input:invalid {
+									  border: 1px solid red;
+									}
+
+									input:valid {
+									  border: 1px solid green;
+									}*/
 								}
 		    				}
 		    				#message-area {
