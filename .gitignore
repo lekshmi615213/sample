@@ -6,5 +6,5 @@ https://git-scm.com/docs/gitignore
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/node_modules/
-/heroImages/
+node_modules/*
+heroImages/*
