@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Takamol</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" >
+    <link rel="stylesheet" href="gulpCss/group.css">
+</head>
+<body id="major-container" onload="switchLang('english')">
+    <section class="navbar-fixed">
+        <nav id="navbar-container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">LOGO</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li class="active"><a href="#">HOME</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li class="active"><a href="#">HOME</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="slider-image">
+        <div id="lang-select">
+            <span id="select-english" onclick="switchLang('english')">English | </span>
+            <span dir="rtl" lang="ar" id="select-arabic" onclick="switchLang('arabic')">العربية</span>
+        </div>
+        <div id="positioning-slider" class="slider fullscreen">
+            <ul class="slides">
+                <li id="justice">
+                    <h1 class="caption center-align slider-image">THE JUSTICE LEAGUE</h1>
+                </li>
+                <li id="league">
+                    <h2 class="caption left-align slider-image">THE LEAGUE OF EXTRA ORDINARY MEN</h2>
+                </li>
+                <li id="protector">
+                    <h3 class="caption right-align slider-image">PROTECTOR OF JUSTICE</h3>
+                </li>
+                <li id="saviour">
+                    <h3 class="caption center-align slider-image">SAVIOUR OF THE GALAXY</h3>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="responsive-container">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    <img id="image-robert" src="heroImages/Robert-Downey-19.jpg" alt="X MEN">
+                </div>
+                <div class="col s12 m4 l4">
+                    <h3 class="header-responsive content-font">LEADERS</h3>
+                    <p id="content-responsive" class="content-font">We provide tickets at the cheapest rate for your favourite SUPER HERO movies. Get your tickets here.</p>
+                    <p class="header-responsive"><a href="#">CLICK HERE</a></p>
+                    <img class="other-images" src="heroImages/maxresdefault.jpg" alt="X MEN">
+                </div>
+                <div class="col s12 m4 l4">
+                    <img class="image-responsive" src="heroImages/deadpool-first-look-wide-1200x520.jpg" alt="X MEN">
+                    <img class="image-responsive" src="heroImages/images.jpeg" alt="X MEN">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sector">
+        <h4 id="sector-heading"></h4>
+        <div id="sector-text" dir="auto"></div>
+        <div id="sector-img-container">
+            <img id="sector-img" src="heroImages/sector-img.png" alt="Sector">
+        </div>
+    </section>
+    <nav id="navigator">
+        <span id="logo">
+            <a href="#">LOGO</a>
+        </span>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOOKING</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="http://twitter.com"><img class="icon" src="heroImages/twitter.png"></a></li>
+            <li><a href="http://facebook.com"><img class="icon" src="heroImages/facebook.png"></a></li>
+        </ul>
+        <ul id="mobile-site" class="side-nav mobile-float">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BOOKING</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="http://twitter.com"><img class="icon" src="heroImages/twitter.png"></a></li>
+            <li><a href="http://facebook.com"><img class="icon" src="heroImages/facebook.png"></a></li>
+        </ul>
+    </nav>
+    <section id="map-container">
+        <div id="google-map"></div>
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+<script src="gulpJs/group.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2UBdCDepS9IHAjQZELDMFJwjJIDblTdw&libraries=places&callback=initialize" async defer></script>
+</html>
