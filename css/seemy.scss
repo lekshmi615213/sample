@@ -208,18 +208,20 @@ body {
 			margin: 0px auto;
 			padding-top: 5%;
 			padding-bottom: 2%;
-			h1 {
-				font-size: 34px;
-				text-align: center;
-				color: $nav-background;
-				@media only screen and (max-width: $mobile-device) {
-					font-size: 27px;
+			header {
+				h1 {
+					font-size: 34px;
+					text-align: center;
+					color: $nav-background;
+					@media only screen and (max-width: $mobile-device) {
+						font-size: 27px;
+					}
 				}
-			}
-			h2 {
-				@extend h1;
-				font-size: 27px;
-				font-weight: bolder;
+				h2 {
+					@extend h1;
+					font-size: 27px;
+					font-weight: bolder;
+				}
 			}
 			p {
 				color: $nav-background;
@@ -306,8 +308,8 @@ body {
 		padding: 15px 12px;
 		position: relative;
 		border-radius: 5px;
-		margin-bottom: 2%;
 		@include content-place($middle-container);
+		margin-bottom: 2%;
 		#partnership {
 			h2 {
 				font-size: 20px;
@@ -332,22 +334,32 @@ body {
 	    width: 100%;
 	    height: 750px;
 	    position: relative;
-	    #google-map {
-		    width: 100%;
-		    height: 100%;
+	    #container-in-map {
+	    	width: 100%;
+	    	height: 100%;
+		    #google-map {
+			    width: 100%;
+			    height: 100%;
+			}
+			#view-form {
+		    	position: absolute;
+		    	top: 0;
+		    	right: 0;
+		    	z-index: 1;
+		    }
 		}
-		#view-form {
-	    	position: absolute;
-	    	top: 0;
-	    	right: 0;
-	    	display: none;
-	    }
 		#form-in-map {
 			position: absolute;
 			width: 100%;
 		    height: 100%;
 		    background: url("../images/bg_contacts.png") repeat transparent;
 		    top: 0;
+		    #view-map {
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 4;
+			}
 		    .container-fluid { 
 		    	padding-top: 1%;
 		    	.row {
@@ -398,20 +410,10 @@ body {
 		    						.form-control {
 		    							width: 95%;
 		    						}
-		    						/*input:required {
-									  border: 1px solid yellow;
-									}
-		    						input:invalid {
-									  border: 1px solid red;
-									}
-
-									input:valid {
-									  border: 1px solid green;
-									}*/
 								}
 		    				}
 		    				#message-area {
-		    					input {
+		    					textarea {
 		    						height: 200px;
 		    						@media only screen and(max-width: $mobile-device) {
 										height: 100px;
@@ -420,11 +422,6 @@ body {
 							}
 		    			}
 		    		}
-		    		#view-map {
-						position: absolute;
-						top: 0;
-						right: 0;
-					}
 		    	}
 		    }
 		}

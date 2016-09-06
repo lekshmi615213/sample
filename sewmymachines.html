@@ -52,7 +52,9 @@
 	</section>
 	<section class="parallax-tyre">
 		<div>
-			<h1>Creating Smarter Machines</h1>
+			<header>
+				<h1>Creating Smarter Machines</h1>
+			</header>
 			<p>SeeMyMachines will help you maximize productivity and improve efficiency of your machines </p>
 			<button type="submit" class="btn btn-success">Download Brochure</button>
 		</div>
@@ -95,7 +97,9 @@
 	<section class="parallax-factory">
 		<div>
 			<img src="images/mobdus.png">
-			<h2>Being Modbus-ready, SeeMyMachines can be easily integrated into machines</h2>
+			<header>
+				<h2>Being Modbus-ready, SeeMyMachines can be easily integrated into machines</h2>
+			</header>
 			<p id="mobdus-content">The required data can be sent to the application from the PLC, eliminating other physical sensor networks.</p>
 		</div>
 	</section>
@@ -122,9 +126,12 @@
 		<button type="submit" id="join-member" class="btn btn-primary">JOIN US</button>
 	</section>
 	<section id="map-container">
-		<section id="google-map"></section>
-		<button type="submit" id="view-form" class="btn btn-success">View Form</button>
-		<section id="form-in-map">
+		<section id="container-in-map" class="hide-part">
+			<button type="submit" id="view-form" class="btn btn-success view">View Form</button>
+			<section id="google-map"></section>
+		</section>
+		<section id="form-in-map" class="hide-part">
+			<button type="submit" id="view-map" class="btn btn-success view">View Map</button>
 			<section class="container-fluid">
 				<section class="row">
 					<section id="contact" class="col-sm-6 col-md-6 col-lg-6">
@@ -158,12 +165,11 @@
 						    </div>
 						    <div id="message-area" class="form-group">
 						      	<label for="msg-area">MESSAGE (REQUIRED)</label>
-						      	<input type="text" name="textfield" class="form-control" id="msg-area" required>
+						      	<textarea class="form-control" name="comment" id="msg-area" required></textarea>
 						    </div>
-						    <button id="send-msg" class="btn btn-primary">SEND MESSAGE</button>
+						    <button id="send-msg" type="button" class="btn btn-primary">SEND MESSAGE</button>
 						</form>
 					</section>
-					<button type="submit" id="view-map" class="btn btn-success">View Map</button>
 				</section>
 			</section>
 		</section>
