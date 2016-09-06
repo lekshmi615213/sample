@@ -38,6 +38,11 @@ $iframe-breakpoint: 500px;
 }
 body {
 	font-family: $text-font;
+	.navbar-fixed-top {
+		@media only screen and (max-width: $mobile-device) {
+			position: relative;
+		}
+	}
 	#navbar-container {
 		background-color: $nav-background ;
 		height: 80px;
@@ -118,7 +123,7 @@ body {
 					}
 				}
 				#navigation-bar {
-					#major-navbar {
+					#main-navbar {
 						padding-top: 10px;
 						li {
 							a {
