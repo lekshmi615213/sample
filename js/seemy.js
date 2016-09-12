@@ -21,8 +21,9 @@ $(document).ready(function() {
     var arr = [];
     $(".button-view").on('click', function(e) {
         e.preventDefault();
-        $(this).parent().hide();
-        $(this).parent().siblings().show();
+        var clickdiv = $(this).parent();
+        clickdiv.hide();
+        clickdiv.siblings().show();
     });
     $('#contact').bootstrapValidator({
         fields: {
