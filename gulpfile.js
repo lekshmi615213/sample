@@ -13,17 +13,17 @@ gulp.task('minifycss', function(){
  .pipe(gulp.dest('newgulp'));
 });
 gulp.task('compress', function(){
- return gulp.src('./js/seemy.js')
+ return gulp.src('./js/*.js')
  .pipe(uglify())
  .pipe(gulp.dest('newjsgulp'));
 });
 gulp.task('sass', function(){
- gulp.src('./css/seemy.scss')
+ gulp.src('./css/*.scss')
  .pipe(sass())
  .pipe(cssmin({keepSpecialComment:1}))
  .pipe(gulp.dest('newgulp'))
 });
 gulp.task('watch', function(){
-	gulp.watch('./css/seemy.scss',['sass']);
-	gulp.watch('./js/seemy.js',['compress']);
+	gulp.watch('./css/*.scss',['sass']);
+	gulp.watch('./js/*.js',['compress']);
 });

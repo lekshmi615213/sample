@@ -1,0 +1,295 @@
+body {
+  background-color: #dcdcdc;
+  margin: auto 0; }
+  body header {
+    margin: auto;
+    width: 100%;
+    height: 65px;
+    background-color: #fff; }
+    body header .logo-section {
+      width: 30%;
+      height: 65px;
+      float: left; }
+      body header .logo-section .logo {
+        width: 100px;
+        height: 60px; }
+    body header .welcome-section {
+      display: inline;
+      float: right;
+      width: 35%; }
+      body header .welcome-section .welcome {
+        width: 7%;
+        height: 47px;
+        padding-top: 8px;
+        float: left; }
+      body header .welcome-section p {
+        font-size: 20px;
+        color: #a9a9a9;
+        width: 90%;
+        float: right; }
+  body .page-content {
+    margin: auto;
+    width: 100%; }
+    body .page-content .representation {
+      display: inline;
+      width: 100%;
+      height: 1000px; }
+      body .page-content .representation .active .excited {
+        background-color: green; }
+      body .page-content .representation .bar {
+        background-color: #fff;
+        display: inline-block;
+        width: 175px;
+        height: 280px;
+        padding: 0;
+        margin: 24px;
+        border-radius: 10px;
+        float: left; }
+        body .page-content .representation .bar .project, body .page-content .representation .bar .budget {
+          background-color: #fff;
+          width: 100%;
+          height: 40px;
+          color: #6b6e5f;
+          padding-top: 14px;
+          padding-left: 14px;
+          border-bottom: 1px solid #d3d3d3; }
+        body .page-content .representation .bar .number, body .page-content .representation .bar .sar {
+          width: 100%;
+          height: 40px;
+          background-color: #fff;
+          color: #6b6e5f;
+          padding-top: 25px;
+          padding-left: 14px;
+          border-bottom: 1px solid #d3d3d3; }
+        body .page-content .representation .bar .pic-rep, body .page-content .representation .bar .pic-rep1 {
+          width: 100%;
+          height: 73%;
+          background-color: #fff;
+          padding-top: 22px;
+          padding-left: 14px; }
+          body .page-content .representation .bar .pic-rep .static-report, body .page-content .representation .bar .pic-rep1 .static-report, body .page-content .representation .bar .pic-rep .static-report1, body .page-content .representation .bar .pic-rep1 .static-report1 {
+            width: 30%;
+            height: 100%;
+            float: left;
+            color: #6b6e5f; }
+          body .page-content .representation .bar .pic-rep .circle-chart, body .page-content .representation .bar .pic-rep1 .circle-chart {
+            float: right;
+            width: 70%;
+            height: 100%; }
+            body .page-content .representation .bar .pic-rep .circle-chart svg, body .page-content .representation .bar .pic-rep1 .circle-chart svg {
+              animation: spin 2s linear; }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+      body .page-content .representation .bar {
+        background-color: #fff;
+        display: inline-block;
+        width: 175px;
+        height: 280px;
+        padding: 0;
+        margin: 24px;
+        border-radius: 10px;
+        float: left;
+        /*.active {
+        	.excited {
+        		background: green;
+        	}
+        }*/ }
+        body .page-content .representation .bar .budget {
+          background-color: #fff;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .sar {
+          background-color: #fff;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .rectangle {
+          float: right;
+          width: 70%;
+          height: 100%; }
+          body .page-content .representation .bar .rectangle svg {
+            padding-left: 40px; }
+      body .page-content .representation .bar {
+        display: inline-block;
+        width: 175px;
+        height: 280px;
+        padding: 0;
+        margin: 24px;
+        border-radius: 10px;
+        float: left;
+        background-color: #dcdcdc;
+        /*.active {
+        	.excited {
+        		background: green;
+        	}
+        }*/ }
+        body .page-content .representation .bar .budget {
+          background-color: #fff;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .sar {
+          background-color: #fff;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .pic-rep1 .list {
+          font-family: Helvetica;
+          padding: 0;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .pic-rep1 th {
+          text-align: left; }
+        body .page-content .representation .bar .pic-rep1 th,
+        body .page-content .representation .bar .pic-rep1 td {
+          padding: 0 1em 0.2ex 0; }
+        body .page-content .representation .bar .pic-rep1 th.center,
+        body .page-content .representation .bar .pic-rep1 td.center {
+          text-align: center; }
+        body .page-content .representation .bar .pic-rep1 th.num,
+        body .page-content .representation .bar .pic-rep1 td.num {
+          text-align: right; }
+      body .page-content .representation .bar {
+        display: inline-block;
+        width: 175px;
+        height: 280px;
+        padding: 0;
+        margin: 24px;
+        border-radius: 10px;
+        float: left;
+        background-color: #dcdcdc; }
+        body .page-content .representation .bar .budget {
+          background-color: #fff;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .sar {
+          background-color: #fff;
+          color: #6b6e5f; }
+        body .page-content .representation .bar .pic-rep1 {
+          position: relative; }
+          body .page-content .representation .bar .pic-rep1 .chart rect {
+            stroke: white; }
+          body .page-content .representation .bar .pic-rep1 .chart text {
+            font: 13px sans-serif;
+            fill: red; }
+          body .page-content .representation .bar .pic-rep1 .chart rect.first {
+            stroke: none;
+            fill: #95c94d; }
+          body .page-content .representation .bar .pic-rep1 .chart rect.second {
+            font: 10px sans-serif;
+            color: black;
+            stroke: none;
+            fill: #5f9615; }
+    body .page-content p {
+      width: 80%;
+      float: left;
+      padding-top: 40px;
+      padding-left: 43px;
+      color: #fff; }
+    body .page-content .overall-project {
+      display: inline;
+      width: 100%;
+      height: 600px;
+      float: left; }
+      body .page-content .overall-project .project-tab {
+        width: 20%;
+        height: 280px;
+        background: #fff;
+        margin: 22px;
+        white-space: nowrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        float: left; }
+        body .page-content .overall-project .project-tab .ch_border {
+          background: #4d4d4d; }
+        body .page-content .overall-project .project-tab .project-detail {
+          width: 100%;
+          height: auto; }
+          body .page-content .overall-project .project-tab .project-detail .pro-title {
+            width: 100%;
+            height: 20%;
+            color: #6b6e5f;
+            padding-left: 57px;
+            padding-top: 30px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #d3d3d3; }
+          body .page-content .overall-project .project-tab .project-detail .pro-progress {
+            width: 100%;
+            height: 40%;
+            border-bottom: 1px solid #d3d3d3; }
+          body .page-content .overall-project .project-tab .project-detail .pro-icons {
+            border-bottom: 1px solid #d3d3d3; }
+            body .page-content .overall-project .project-tab .project-detail .pro-icons .demo-icon {
+              padding-left: 5px;
+              padding-right: 5px;
+              font-size: 16px;
+              border-right: 1px solid #d3d3d3; }
+      body .page-content .overall-project .pro-rep {
+        width: 72%;
+        height: 600px;
+        background: #fff;
+        float: right;
+        margin: 20px;
+        position: relative;
+                        /*#wrapper {
+							display: none;
+						}*/
+                        /*#xaxis .domain {
+							fill:none;
+							stroke:#000;
+						}
+						#xaxis text, #yaxis text {
+							font-size: 12px;
+						}*/ }
+        body .page-content .overall-project .pro-rep #pro-name {
+          height: 110px;
+          font-size: 20px;
+          color: #000;
+          border-bottom: 1px solid #d3d3d3;
+          padding-top: 20px;
+          padding-left: 25px;
+          font-family: sans-serif; }
+        body .page-content .overall-project .pro-rep #pie-details {
+          height: 150px;
+          color: #000; }
+        body .page-content .overall-project .pro-rep #loader {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 1;
+          width: 150px;
+          height: 150px;
+          margin: -75px 0 0 -75px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite; }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+        body .page-content .overall-project .pro-rep .animate-bottom {
+          position: relative;
+          -webkit-animation-name: animatebottom;
+          -webkit-animation-duration: 1s;
+          animation-name: animatebottom;
+          animation-duration: 1s; }
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0px;
+    opacity: 1; } }
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+
+/*# sourceMappingURL=d3.css.map */

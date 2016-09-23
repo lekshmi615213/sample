@@ -1,0 +1,358 @@
+        body {
+            background-color: #dcdcdc;
+            margin: auto 0;
+            header {
+                margin: auto;
+                width: 100%;
+                height: 65px;
+                background-color: #fff;
+                .logo-section {
+                    width: 30%;
+                    height: 65px;
+                    float: left;
+                    .logo {
+                        width: 100px;
+                        height: 60px;
+                    }
+                }
+                .welcome-section {
+                    display: inline;
+                    float: right;
+                    width: 35%;
+                    .welcome {
+                        width: 7%;
+                        height: 47px;
+                        padding-top: 8px;
+                        float: left;
+                    }
+                    p {
+                        font-size: 20px;
+                        color: #a9a9a9;
+                        width: 90%;
+                        float: right;
+                    }
+                }
+            }
+            .page-content {
+                margin: auto;
+                width: 100%;
+                .representation {
+                    display: inline;
+                    width: 100%;
+                    height: 1000px;
+                    .active {
+                        .excited {
+                            background-color: green;
+                        }
+                    }
+                    .bar {
+                        background-color: #fff;
+                        display: inline-block;
+                        width: 175px;
+                        height: 280px;
+                        padding: 0;
+                        margin: 24px;
+                        border-radius: 10px;
+                        float: left;
+                        .project {
+                            background-color: #fff;
+                            width: 100%;
+                            height: 40px;
+                            color: #6b6e5f;
+                            padding-top: 14px;
+                            padding-left: 14px;
+                            border-bottom: 1px solid #d3d3d3;
+                        }
+                        .number {
+                            width: 100%;
+                            height: 40px;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                            padding-top: 25px;
+                            padding-left: 14px;
+                            border-bottom: 1px solid #d3d3d3;
+                        }
+                        .pic-rep {
+                            width: 100%;
+                            height: 73%;
+                            background-color: #fff;
+                            padding-top: 22px;
+                            padding-left: 14px;
+                            .static-report {
+                                width: 30%;
+                                height: 100%;
+                                float: left;
+                                color: #6b6e5f;
+                            }
+                            .circle-chart {
+                                float: right;
+                                width: 70%;
+                                height: 100%;
+                                svg {
+                                    animation: spin 2s linear;
+                                }
+                            }
+                            @keyframes spin {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        }
+                    }
+                    .bar {
+                        background-color: #fff;
+                        display: inline-block;
+                        width: 175px;
+                        height: 280px;
+                        padding: 0;
+                        margin: 24px;
+                        border-radius: 10px;
+                        float: left;
+                        .budget {
+                            @extend .project;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                        }
+                        .sar {
+                            @extend .number;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                        }
+                        .pic-rep1 {
+                            @extend .pic-rep;
+                        }
+                        .static-report1 {
+                            @extend .static-report;
+                        }
+                        .rectangle {
+                            float: right;
+                            width: 70%;
+                            height: 100%;
+                            svg {
+                                padding-left: 40px;
+                            }
+                        }
+                    }
+                    .bar {
+                        display: inline-block;
+                        width: 175px;
+                        height: 280px;
+                        padding: 0;
+                        margin: 24px;
+                        border-radius: 10px;
+                        float: left;
+                        background-color: #dcdcdc;
+                        .budget {
+                            @extend .project;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                        }
+                        .sar {
+                            @extend .number;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                        }
+                        .pic-rep1 {
+                            @extend .pic-rep;
+                            .list {
+                                font-family: Helvetica;
+                                padding: 0;
+                                color: #6b6e5f;
+                            }
+                            th {
+                                text-align: left;
+                            }
+                            th,
+                            td {
+                                padding: 0 1em 0.2ex 0;
+                            }
+                            th.center,
+                            td.center {
+                                text-align: center;
+                            }
+                            th.num,
+                            td.num {
+                                text-align: right;
+                            }
+                        }
+                    }
+                    .bar {
+                        display: inline-block;
+                        width: 175px;
+                        height: 280px;
+                        padding: 0;
+                        margin: 24px;
+                        border-radius: 10px;
+                        float: left;
+                        background-color: #dcdcdc;
+                        .budget {
+                            @extend .project;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                        }
+                        .sar {
+                            @extend .number;
+                            background-color: #fff;
+                            color: #6b6e5f;
+                        }
+                        .pic-rep1 {
+                            @extend .pic-rep;
+                            position: relative;
+                            .chart rect {
+                                stroke: white;
+                            }
+                            .chart text {
+                                font: 13px sans-serif;
+                                fill: red;
+                            }
+                            .chart rect.first {
+                                stroke: none;
+                                fill: #95c94d;
+                            }
+                            .chart rect.second {
+                                font: 10px sans-serif;
+                                color: black;
+                                stroke: none;
+                                fill: #5f9615;
+                            }
+                        }
+                    }
+                }
+                p {
+                    width: 80%;
+                    float: left;
+                    padding-top: 40px;
+                    padding-left: 43px;
+                    color: #fff;
+                }
+                .overall-project {
+                    display: inline;
+                    width: 100%;
+                    height: 600px;
+                    float: left;
+                    .project-tab {
+                        width: 20%;
+                        height: 280px;
+                        background: #fff;
+                        margin: 22px;
+                        white-space: nowrap;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        float: left;
+                        .ch_border {
+                            background: #4d4d4d;
+                        }
+                        .project-detail {
+                            width: 100%;
+                            height: auto;
+                            .pro-title {
+                                width: 100%;
+                                height: 20%;
+                                color: #6b6e5f;
+                                padding-left: 57px;
+                                padding-top: 30px;
+                                padding-bottom: 12px;
+                                border-bottom: 1px solid #d3d3d3;
+                            }
+                            .pro-progress {
+                                width: 100%;
+                                height: 40%;
+                                border-bottom: 1px solid #d3d3d3;
+                            }
+                            .pro-icons {
+                                border-bottom: 1px solid #d3d3d3;
+                                .demo-icon {
+                                    padding-left: 5px;
+                                    padding-right: 5px;
+                                    font-size: 16px;
+                                    border-right: 1px solid #d3d3d3;
+                                }
+                            }
+                        }
+                    }
+                    .pro-rep {
+                        width: 72%;
+                        height: 600px;
+                        background: #fff;
+                        float: right;
+                        margin: 20px;
+                        position: relative;
+                        #pro-name {
+                            height: 110px;
+                            font-size: 20px;
+                            color: #000;
+                            border-bottom: 1px solid #d3d3d3;
+                            padding-top: 20px;
+                            padding-left: 25px;
+                            font-family: sans-serif;
+                        }
+                        #pie-details {
+                            height: 150px;
+                            color: #000;
+                        }
+                        #loader {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            z-index: 1;
+                            width: 150px;
+                            height: 150px;
+                            margin: -75px 0 0 -75px;
+                            border: 16px solid #f3f3f3;
+                            border-radius: 50%;
+                            border-top: 16px solid #3498db;
+                            width: 120px;
+                            height: 120px;
+                            -webkit-animation: spin 2s linear infinite;
+                            animation: spin 2s linear infinite;
+                        }
+                        @-webkit-keyframes spin {
+                            0% {
+                                -webkit-transform: rotate(0deg);
+                            }
+                            100% {
+                                -webkit-transform: rotate(360deg);
+                            }
+                        }
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        .animate-bottom {
+                            position: relative;
+                            -webkit-animation-name: animatebottom;
+                            -webkit-animation-duration: 1s;
+                            animation-name: animatebottom;
+                            animation-duration: 1s
+                        }
+                        @-webkit-keyframes animatebottom {
+                            from {
+                                bottom: -100px;
+                                opacity: 0
+                            }
+                            to {
+                                bottom: 0px;
+                                opacity: 1
+                            }
+                        }
+                        @keyframes animatebottom {
+                            from {
+                                bottom: -100px;
+                                opacity: 0
+                            }
+                            to {
+                                bottom: 0;
+                                opacity: 1
+                            }
+                        }
+                    }
+                }
+            }
+        }

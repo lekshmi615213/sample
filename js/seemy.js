@@ -64,7 +64,6 @@ $(document).ready(function() {
 
     .on('success.form.bv', function(e) {
         e.preventDefault();
-        console.log(11);
         var username = $("#enter-name").val(),
         mailId = $("#enter-email").val(),
         comment = $("#textfield").val();

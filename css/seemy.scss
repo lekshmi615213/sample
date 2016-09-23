@@ -9,6 +9,7 @@
 @mixin position($position) {
     position: $position;
 }
+
 @mixin background-color($bcolor) {
     background-color: $bcolor;
 }
@@ -59,7 +60,7 @@ body {
                     cursor: pointer;
                 }
                 .login {
-                     @include background-color(#4CAF50);
+                    @include background-color(#4CAF50);
                     margin-right: 16px;
                 }
                 .demo {

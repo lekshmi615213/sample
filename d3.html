@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>d3 file</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/d3.css">
+    <link rel="stylesheet" href="css/fontello.css">
+
+    <body>
+</head>
+
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="images/910th.png" class="logo">
+        </div>
+        <div class="welcome-section">
+            <img class="welcome" src="images/welcome.png">
+            <p>welcome,pmd_user</p>
+        </div>
+    </header>
+    <section class="page-content">
+        <section class="representation">
+            <section class="bar">
+                <div class="project excited">projects</div>
+                <div class="number excited">TOTAL
+                    <br>NUMBER</div>
+                <div class="pic-rep">
+                    <div class="static-report">5.00% completed 95.00%
+                        <br>in progress</div>
+                    <div class="circle-chart"></div>
+                </div>
+            </section>
+            <section class="bar">
+                <div class="budget excited">Budget</div>
+                <div class="sar excited">TOTAL
+                    <br>(MLN)SAR</div>
+                <div class="pic-rep1">
+                    <div class="static-report1">0.6%
+                        <br>0.7 min
+                        <br>spent</div>
+                    <div class="rectangle"></div>
+                </div>
+            </section>
+            <section class="bar">
+                <div class="budget excited">Team</div>
+                <div class="sar excited">TOTAL
+                    <br>NUMBER</div>
+                <div class="pic-rep1">
+                    <div class="list"></div>
+                </div>
+            </section>
+            <section class="bar">
+                <div class="budget excited">Risk</div>
+                <div class="sar excited">TOTAL
+                    <br>NUMBER</div>
+                <div class="pic-rep1">
+                    <div class="chart" id="barchart1"></div>
+                </div>
+            </section>
+            <section class="bar">
+                <div class="budget excited">Issues</div>
+                <div class="sar excited">TOTAL
+                    <br>NUMBER</div>
+                <div class="pic-rep1">
+                    <div class="chart" id="barchart2"></div>
+                </div>
+            </section>
+        </section>
+        <p>CHOOSE A PROJECT</p>
+        <section class="overall-project">
+            <div class="project-tab">
+                <div class="project-detail" id="main-pro">
+                    <div class="pro-title">9/10ths Protfolio</div>
+                    <div class="pro-progress"></div>
+                    <div class="pro-icons">
+                        <i class="demo-icon icon-group">47</i>
+                        <i class="demo-icon icon-down-open-1">5780</i>
+                        <i class="demo-icon icon-tree">205</i>
+                        <i class="demo-icon icon-plus-squared">209</i>
+                    </div>
+                </div>
+                <div class="project-detail" id="main-pie">
+                    <div class="pro-title">123A2B</div>
+                    <div class="pro-progress"></div>
+                    <div class="pro-icons">
+                        <i class="demo-icon icon-group">1</i>
+                        <i class="demo-icon icon-down-open-1">0</i>
+                        <i class="demo-icon icon-tree">0</i>
+                        <i class="demo-icon icon-plus-squared">0</i>
+                    </div>
+                </div>
+                <div class="project-detail" id="sub-pie">
+                    <div class="pro-title">A2F</div>
+                    <div class="pro-progress"></div>
+                    <div class="pro-icons">
+                        <i class="demo-icon icon-group">41</i>
+                        <i class="demo-icon icon-down-open-1">381</i>
+                        <i class="demo-icon icon-tree">98</i>
+                        <i class="demo-icon icon-plus-squared">102</i>
+                    </div>
+                </div>
+                <div class="project-detail" id="micro-pie">
+                    <div class="pro-title">A2V</div>
+                    <div class="pro-progress"></div>
+                    <div class="pro-icons">
+                        <i class="demo-icon icon-group">5</i>
+                        <i class="demo-icon icon-down-open-1">5399</i>
+                        <i class="demo-icon icon-tree">107</i>
+                        <i class="demo-icon icon-plus-squared">107</i>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-rep">
+                <div id="pro-name"></div>
+                <div id="pie-details"></div>
+                <div id="wrapper" class="animate-bottom"></div>
+            </div>
+        </section>
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://rawgit.com/gka/d3-jetpack/master/d3-jetpack.js"></script>
+<script type="text/javascript" src="js/d3.js"></script>
+
+</html>
