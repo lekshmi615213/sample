@@ -1,0 +1,10 @@
+{
+	"projectPie": [5,95],
+	"riskBar": [20, 30, 60, 50, 40, 10],
+	"issueBar": [42, 43, 44, 30, 20, 15],
+	"fillBar": [80, 20],
+	"fillColor": ["#6c9c23", "#77b31d"],
+	"portfolio": [95, 5],
+	"halfValue": [50, 50],
+	"employees": [31, 7, 7, 2]
+}

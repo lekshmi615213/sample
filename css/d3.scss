@@ -1,0 +1,189 @@
+$header-color: #fff;
+$middle-container: 80%;
+$content-color: #E5E5E5;
+$border-color: #d2d0d0;
+$excited-color: #8ec63f;
+@mixin page-container($middle-container) {
+    width: $middle-container;
+    margin: 0 auto;
+}
+@mixin container-border($border-color) {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+}
+
+body {
+	.fill {
+		float: right;
+		margin-top: 29px;
+	}
+	background-color: $content-color;
+	margin: 0;
+	header {
+		background-color: $header-color;
+		width: 100%;
+		height: 60px;
+		section {
+			@include page-container($middle-container);
+			height: 60px;
+			#logo-container {
+			    width: 30%;
+			    float: left;
+			    height: 60px;
+				img {
+					width: 108px;
+    				height: 60px;
+				}
+			}
+			#user-info {
+				width: 30%;
+				float: right;
+				p {
+					text-align: right;
+				}
+			}
+		}
+	}
+	#major-container {
+		height: 450px;
+		padding-top: 30px; /*repeat*/
+		@include page-container($middle-container);
+		.active {
+			margin-top: -10px;
+			height: 400px;
+			.excited {
+				background-color: $excited-color;
+				border-bottom: 1px solid $border-color;  
+			}
+		}
+		section {
+			height: 337px;
+			@include container-border($border-color);
+			width: 19%;
+			float: left;
+			margin-right: 10px;
+			.project-box {
+				height: 50px;
+				padding: 15px;
+			}
+			
+			.number-in-project {
+				height: 80px;
+				background-color: $header-color;
+				border-bottom: 1px solid $border-color;
+				span {
+					float: left;
+					padding-top: 20px;
+					padding-left: 30px;
+				}
+			}
+			ul {
+				list-style: none;
+				padding-left: 0;
+				background-color: $header-color;
+				/*height: 181px;*/
+				li {
+					line-height: 35px;
+					span {
+						float: right;
+						padding-right: 15px;
+					}
+				}
+				li:nth-child(odd) {
+    				background-color: $header-color;
+				}
+				li:nth-child(even) {
+    				background-color: $content-color;
+				}
+			}
+			.chart{
+				background-color: $content-color;
+				/*height: 190px;*/
+				padding-left: 0;
+				#content-in-chart {
+					width: 28%;
+					text-align: center;
+				    float: left;
+				    padding-top: 30px;
+				    padding-left: 5px;
+				}
+				#project-pie{  
+					padding-top: 26px;
+					float: right;
+					-webkit-animation-name: spin;
+				    -webkit-animation-duration: 4000ms;
+				    -webkit-animation-timing-function: linear;
+				}
+				@-webkit-keyframes spin {
+    				from { -webkit-transform: rotate(0deg); }
+    				to { -webkit-transform: rotate(360deg); }
+				}
+			}
+		}
+	}
+	#adjacent-part {
+		@include page-container($middle-container);
+		#nav-section {
+			width: 30%;
+			float: left;
+			height: 300px;
+			@include container-border($border-color);
+			section {
+				border-bottom: 1px solid $border-color;
+				header {
+					background-color: $content-color;
+					color: $excited-color; 
+					h1 {
+						padding: 12px;
+						font-size: 16px;
+					}
+				}
+
+				section {
+					div {
+						width: 33.3%;
+						padding-top: 20px;
+						float: left;
+						height: 70px;
+						position: relative;
+						border-bottom: 1px solid $border-color;
+						.nav-image {
+							svg {
+								padding-top: 10px;
+							}
+						}
+						.nav-text {
+							position: absolute;
+						    top: 39px;
+						    left: 53px;
+						    font-size: 19px;
+						}
+						.nav-alone {
+							@extend .nav-text;
+							left: 40px;
+						}
+					}
+				}
+			}
+		}
+		#display-section {
+			width: 68%;
+			float: right;
+			height: 600px;
+			@include container-border($border-color);
+			#heading-section {
+				height: 80px;
+				border-bottom: 1px solid $border-color; 
+				header {
+					background-color: $content-color;
+					h1 {
+						padding: 10px;
+					}
+				}
+				#big-image {
+					padding-top: 56px;
+				}
+			}
+		}	
+	} 
+}
